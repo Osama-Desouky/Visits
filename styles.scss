@@ -1,5 +1,10 @@
-// modified Variables "It Must Be Imported Before Bootstrap" 
-@import "assets/sass/custom-variables.scss";
+// modified Variables "It Must Be Imported Before Bootstrap"
+$theme-colors: (
+  "primary": #1d4d8b,
+  "danger": #db5757,
+  "success": #45ae54
+);
+$body-bg: #efeff5;
 
 // bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -7,8 +12,3 @@
 // Font Awesome
 @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 
-// Main Css
-@import "assets/sass/main.scss";
-
-// Media Queries
-@import "assets/sass/mediaQuery.scss";

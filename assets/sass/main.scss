@@ -1,0 +1,248 @@
+@font-face {
+  font-family: almarai;
+  src: url("../fonts/Almarai-Regular.ttf");
+}
+@font-face {
+  font-family: almarai;
+  src: url("../fonts/Almarai-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: almarai;
+  src: url("../fonts/Almarai-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: almarai;
+  src: url("../fonts/Almarai-ExtraBold.ttf");
+  font-weight: 900;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b8d8f;
+  border-radius: 5px;
+  margin: 0 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8b8d8f;
+}
+body,
+html {
+  direction: rtl;
+  text-align: right;
+  font-family: almarai;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 15px;
+}
+
+.login-content {
+  background-image: url("../images/login-bg.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  min-height: auto;
+  height: 100vh;
+  width: 56%;
+  background-position: 61% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 50, 88, 0.65);
+    z-index: 0;
+  }
+  .content-wrap {
+    position: relative;
+    z-index: 1;
+    width: 750px;
+    margin: 6% 10% 0 auto;
+    height: 100%;
+    h2 {
+      font-weight: bold;
+      line-height: 53px;
+      margin-top: 42px;
+      margin-bottom: 0;
+    }
+    p.content {
+      font-size: 15px;
+      line-height: 30px;
+      width: 600px;
+      margin: auto;
+    }
+  }
+  ul.logos {
+    li {
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 0px 28px;
+      position: relative;
+      &:last-child {
+        padding: 0px 28px 0 0;
+      }
+      &:not(:last-child):after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 2px;
+        height: 44px;
+        background: #fff;
+      }
+    }
+  }
+  .row.footer {
+    line-height: 45px;
+    padding-top: 20px;
+    p {
+      font-size: 14px;
+      direction: ltr;
+    }
+    ul.footer-links {
+      padding: 0;
+      margin-left: 40px;
+      li {
+        display: inline-block;
+        color: #fff;
+        font-size: 13px;
+        &:first-child:after {
+          content: "|";
+          vertical-align: top;
+          padding: 0 5px;
+        }
+        a {
+          color: inherit;
+          line-height: 45px;
+          vertical-align: super;
+          &:hover {
+            text-decoration: none;
+            color: #45ae54;
+          }
+        }
+      }
+    }
+  }
+  .row.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .row.description {
+    height: 80vh;
+  }
+  footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+.login-form {
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #45ae54;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: calc(50% - 72px);
+    height: 145px;
+    width: 22px;
+    background-image: url("../images/Union 1.svg");
+    background-repeat: no-repeat;
+  }
+  .form-wrap {
+    width: 468px;
+    margin: 0 auto;
+    padding-top: 6%;
+    min-width: 320px;
+    min-height: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    ul.langs {
+      margin-top: 40px;
+      li {
+        display: inline-block;
+        font-size: 16px;
+        color: #8b8d8f;
+        &:first-child:after {
+          content: "";
+          display: inline-block;
+          width: 1px;
+          height: 17px;
+          margin: 0 18px;
+          background-color: #c8cdd2;
+          position: relative;
+          top: 4px;
+        }
+        a {
+          color: inherit;
+          &:hover {
+            text-decoration: none;
+            color: #26984d;
+          }
+        }
+      }
+      li.active {
+        color: #26984d;
+      }
+    }
+  }
+}
