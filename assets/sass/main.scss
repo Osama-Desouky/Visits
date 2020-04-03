@@ -328,3 +328,57 @@ h6 {
     }
   }
 }
+body.dashboard{
+  overflow: hidden;
+}
+section.side-nav{
+  background: rgb(26,78,145);
+background: linear-gradient(180deg, rgba(26,78,145,1) 0%, rgba(11,53,107,1) 100%);
+min-height: 100vh;
+width: 300px;
+position: fixed;
+top: 0;
+right: 0;
+transition: 0.3s;
+&:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #45ae54;
+}
+#slide-toggle{
+  position: absolute;
+  left: 2px;
+  top: 20px;
+  height: 145px;
+  width: 22px;
+  background: none;
+  border: none;
+  background-image: url("../images/Union 1.svg");
+  background-repeat: no-repeat;
+  color: #fff;
+  transition: 0.3s;
+  &:focus{
+    outline: none;
+  }
+}
+#slide-toggle.reversed{
+  transform: rotateY(180deg);
+  left: -19px;
+}
+}
+section.side-nav.closed {
+  transform: translateX(300px);
+}
+.main-container{
+margin-right: 300px;
+transition: 0.3s;
+min-height: 100vh;
+}
+.main-container.full-container{
+  margin-right: 0;
+
+}

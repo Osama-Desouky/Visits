@@ -5,10 +5,8 @@ $theme-colors: (
   "success": #45ae54
 );
 $body-bg: #efeff5;
-
 // bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
 
-// Font Awesome
-@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
 
