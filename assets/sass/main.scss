@@ -276,26 +276,55 @@ h6 {
       label.custom-control-label {
         padding-right: 26px;
         cursor: pointer;
-    }
+      }
       .custom-checkbox .custom-control-label::before {
         border-radius: 0;
         border: none;
-        background-color: #EBEEF2;
+        background-color: #ebeef2;
         position: absolute;
         right: 0;
         left: auto;
+      }
+      .custom-control-input:focus ~ .custom-control-label::before {
+        box-shadow: none;
+      }
 
-    }
-    .custom-control-input:focus ~ .custom-control-label::before{
-      box-shadow: none;
-    }
-  
-    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-      background-color: #45AE54;
-      right: 0;
-      left: auto;
-      
-  }
+      .custom-checkbox
+        .custom-control-input:checked
+        ~ .custom-control-label::after {
+        background-color: #45ae54;
+        right: 0;
+        left: auto;
+      }
+      .login-btn {
+        font-size: 16px;
+        line-height: 30px;
+        width: 243px;
+        padding: 0.563rem 0.75rem;
+        box-shadow: 0px 7px 17px -3px #45ae54;
+      }
+      a.forget {
+        flex: auto;
+        text-align: left;
+        padding-top: 14px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      button.btn.btn-primary.login-lg-btn {
+        width: 100%;
+        position: relative;
+        font-size: 16px;
+        line-height: 30px;
+        padding: 0.875rem 0.75rem;
+        box-shadow: 0px 7px 17px -3px #1d4d8b;
+      }
+      span.btn-icon {
+        position: absolute;
+        right: 0;
+        height: 48px;
+        padding: 6px 23px;
+        top: 5px;
+      }
     }
   }
 }
