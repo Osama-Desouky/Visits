@@ -1,61 +1,105 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
-    <link rel="stylesheet" href="assets/css/main.min.css" />
-    <link rel="stylesheet" href="assets/css/mediaQuery.min.css" />
 
-    <title>Visits - Dashboard</title>
-  </head>
-  <body class="dashboard">
-    <section class="side-nav">
-      <button type="button" id="slide-toggle">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-      <div class="nav-logo">
-        <img src="assets/images/Group 2323.png" alt="nav-logo">
-      </div>
-      <div class="user-card">
-        <div class="main-data d-flex">
-          <img src="assets/images/Avatar.png" alt="">
-          <div class="title">
-            <h6>عبدالله القحطاني</h6>
-            <p>فاحص متفرغ</p>
-          </div>
-        </div>
-        <hr>
-        <div class="sub-data d-flex">
-          <div class="data-box">
-            <h6>عدد العمليات</h6>
-            <p>
-              <span>‏56</span>
-              عملية
-            </p>
-          </div>
-          <div class="data-box">
-            <h6>رابط العقد</h6>
-            <p>
-              <span><img src="assets/images/Group 1380.png" alt=""></span>
-              العقد
-            </p>
-          </div>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <link rel="stylesheet" href="assets/css/mediaQuery.min.css" />
+
+  <title>Visits - Dashboard</title>
+</head>
+
+<body class="dashboard">
+  <section class="side-nav">
+    <div class="nav-wrapper">
+    <button type="button" id="slide-toggle">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="nav-logo">
+      <img src="assets/images/Group 2323.png" alt="nav-logo" />
+    </div>
+    <div class="user-card">
+      <div class="main-data d-flex">
+        <img src="assets/images/Avatar.png" alt="" />
+        <div class="title">
+          <h6>عبدالله القحطاني</h6>
+          <p>فاحص متفرغ</p>
         </div>
       </div>
-    </section>
-    <div class="main-container"></div>
-    <!-- Jquery -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- bootstrap -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- custom Js -->
-    <script src="js/custom.js"></script>
-  </body>
+      <hr />
+      <div class="sub-data d-flex">
+        <div class="data-box">
+          <h6>عدد العمليات</h6>
+          <p>
+            <span>‏56</span>
+            عملية
+          </p>
+        </div>
+        <div class="data-box">
+          <h6>رابط العقد</h6>
+          <p>
+            <span><img src="assets/images/Group 1380.png" alt="" /></span>
+            العقد
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- menu -->
+    <div id="MainMenu">
+      <div class="list-group panel">
+        <a href="javascript:;" class="list-group-item active" data-parent="#MainMenu">
+          <i class="fas fa-home"></i>
+          الصفحة الرئيسية</a>
+        <a href="#demo2" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu">
+          <img src="assets/images/check-icon.png" alt="icon" class="pre-item-icon">
+          الفحص الميداني 
+          <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+        </a>
+      <div class="collapse" id="demo2" data-parent="#MainMenu">
+        <a href="javascript:;" class="list-group-item" >الفحص الميداني 1</a>
+        <a href="javascript:;" class="list-group-item">الفحص الميداني 2</a>
+        <a href="javascript:;"  class="list-group-item">الفحص الميداني 3</a>
+      </div>
+        <a href="#demo3" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu">
+          <i class="far fa-building"></i>
+          الزيارات الميدانية 
+          <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+        </a>
+        <div class="collapse" id="demo3" data-parent="#MainMenu">
+          <a href="javascript:;" class="list-group-item" >الزيارات الميدانية 1</a>
+          <a href="javascript:;" class="list-group-item">الزيارات الميدانية 2</a>
+          <a href="javascript:;" class="list-group-item">الزيارات الميدانية 3</a>
+        </div>
+        <a href="javascript:;" class="list-group-item" data-parent="#MainMenu">
+          <i class="far fa-bell"></i>
+          التنبيهات
+        <span class="nofication-count">3</span>
+        </a>
+        <a href="javascript:;" class="list-group-item" data-parent="#MainMenu">
+          <i class="fas fa-book-open"></i>
+          مكتبة المعرفة</a>
+        <a href="javascript:;" class="list-group-item" data-parent="#MainMenu">
+          <i class="far fa-envelope"></i>
+          التراسل</a>
+        <a href="javascript:;" class="list-group-item" data-parent="#MainMenu">
+          <i class="fas fa-cog"></i>
+          إدارة النظام</a>
+      </div>
+    </div>
+  </div>
+  </section>
+  <div class="main-container"></div>
+  <!-- Jquery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- custom Js -->
+  <script src="js/custom.js"></script>
+</body>
+
 </html>
