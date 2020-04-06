@@ -551,7 +551,55 @@ section.side-nav.closed {
   margin-right: 300px;
   transition: 0.3s;
   min-height: 100vh;
+  width: calc(100vw - 300px);
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .main-container.full-container {
   margin-right: 0;
+  width: 100vw
+}
+
+header.top-nav
+{
+  position: relative;
+  padding-top: 35px;
+  border-bottom: 1px solid #D3D3DB;
+  h3{
+    color: #464749;
+    font-weight: bold;
+    line-height: 37px;
+  }
+  ul.menu-btns {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    top: 15px;
+    li{
+      display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+    a#menu-nofi-btn:after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      background: #DB5757;
+      border-radius: 50%;
+      right: 8px;
+      top: 5px;
+  }
+    }
+    &>li{
+      &>a{
+        display: block
+      }
+    }
+}
 }
