@@ -5,6 +5,9 @@ $(document).ready(function(){
     $(".side-nav").toggleClass("closed");
     $(".main-container").toggleClass("full-container")
   });
+  $(".pop-details").click(function(){
+    $(this).parent().find(".details-card").toggle()
+  })
 // Slide Collapse
   $('.list-group-item[data-toggle="collapse"]').click(function() {
     if($(this).hasClass("collapsed"))
@@ -29,7 +32,7 @@ $(document).ready(function(){
   $(".mini-panel").click(function(){    
     minimizeCard(cardBtn)
   })
-  $(".max-panel").click(function(){    
+  $(".max-panel").click(function(){
     maxmizeCard(cardBtn)
   })
   function menuBoxHide(element)
@@ -43,13 +46,13 @@ $(document).ready(function(){
     menuBox.show();
   }
   function minimizeCard(element){
-    var cardBody=element.parents(".sm-card").find(".card-body");
+    var cardBody=element.parents(".sm-card , .regular-card").find(".card-body");
     menuBoxHide(element)
     cardBody.collapse("hide");
     
   }
   function maxmizeCard(element){
-    var cardBody=element.parents(".sm-card").find(".card-body");
+    var cardBody=element.parents(".sm-card , .regular-card").find(".card-body");
     menuBoxHide(element)
     cardBody.collapse("show");
   }

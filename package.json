@@ -18,7 +18,12 @@
   "homepage": "https://github.com/devmohsengalal/Visits#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
-    "jquery": "^3.4.1",
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
+    "datatables.net": "^1.10.20",
+    "datatables.net-dt": "^1.10.20",
+    "datatables.net-fixedheader-dt": "^3.1.6",
+    "datatables.net-responsive-dt": "^2.2.3",
+    "jquery": "^3.4.1"
   }
 }

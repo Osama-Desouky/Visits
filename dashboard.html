@@ -8,10 +8,15 @@
   <!-- font-awesome -->
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css"> -->
+  <!-- chart js -->
+  <link rel="stylesheet" href="node_modules/chart.js/dist/Chart.min.css">
   <link rel="stylesheet" href="assets/css/main.min.css" />
   <link rel="stylesheet" href="assets/css/mediaQuery.min.css" />
 
   <title>Visits - Dashboard</title>
+  <!-- chart -->
 </head>
 
 <body class="dashboard">
@@ -55,7 +60,7 @@
           <a href="javascript:;" class="list-group-item active">
             <i class="fas fa-home"></i>
             الصفحة الرئيسية</a>
-          <a href="#demo2" class="list-group-item collapsed"  data-toggle="collapse">
+          <a href="#demo2" class="list-group-item collapsed" data-toggle="collapse">
             <img src="assets/images/check-icon.png" alt="icon" class="pre-item-icon">
             الفحص الميداني
             <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
@@ -120,14 +125,14 @@
       <h3>الصفحة الرئيسية</h3>
       <ul class="menu-btns">
         <li><a href="javascript:;" id="menu-nofi-btn">
-          <img src="assets/images/icon-noti.png" alt="">
-        </a></li>
+            <img src="assets/images/icon-noti.png" alt="">
+          </a></li>
         <li><a href="javascript:;">
-          <img src="assets/images/icon-help.png" alt="">
-        </a></li>
+            <img src="assets/images/icon-help.png" alt="">
+          </a></li>
         <li><a href="javascript:;" id="menu-search-btn">
-          <img src="assets/images/icon_search.png" alt="">
-        </a></li>
+            <img src="assets/images/icon_search.png" alt="">
+          </a></li>
       </ul>
     </header>
     <section class="home-cards">
@@ -135,32 +140,32 @@
         <div class="col-sm-6 col-md-3">
           <div class="sm-card">
             <div class="sm-card-header">
-             <div class="panel-wrapper">
-              <button class="card-btn">
-                <i class="fas fa-ellipsis-v"></i>
-              </button>
-              <ul>
-                <li>
-                  <a href="javascript:;" class="max-panel disabled">
-                    <i class="far fa-window-restore"></i>
-                    إستعادة النافذة
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;" class="mini-panel">
-                    <i class="far fa-window-minimize"></i>
-                    تصغير النافذة
-                  </a>
-                </li>
-                <hr>
-                <li>
-                  <a href="javascript:;" class="close-panel">
-                    <i class="fas fa-times"></i>
-                    إغلاق النافذة
-                  </a>
-                </li>
-              </ul>
-             </div>
+              <div class="panel-wrapper">
+                <button class="card-btn">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul>
+                  <li>
+                    <a href="javascript:;" class="max-panel disabled">
+                      <i class="far fa-window-restore"></i>
+                      إستعادة النافذة
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="mini-panel">
+                      <i class="far fa-window-minimize"></i>
+                      تصغير النافذة
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="javascript:;" class="close-panel">
+                      <i class="fas fa-times"></i>
+                      إغلاق النافذة
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="card-body text-center collapse show">
               <div class="status-counter orange-bg">
@@ -175,32 +180,32 @@
         <div class="col-sm-6 col-md-3">
           <div class="sm-card">
             <div class="sm-card-header">
-             <div class="panel-wrapper">
-              <button class="card-btn">
-                <i class="fas fa-ellipsis-v"></i>
-              </button>
-              <ul>
-                <li>
-                  <a href="javascript:;" class="max-panel disabled">
-                    <i class="far fa-window-restore"></i>
-                    إستعادة النافذة
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;" class="mini-panel">
-                    <i class="far fa-window-minimize"></i>
-                    تصغير النافذة
-                  </a>
-                </li>
-                <hr>
-                <li>
-                  <a href="javascript:;" class="close-panel">
-                    <i class="fas fa-times"></i>
-                    إغلاق النافذة
-                  </a>
-                </li>
-              </ul>
-             </div>
+              <div class="panel-wrapper">
+                <button class="card-btn">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul>
+                  <li>
+                    <a href="javascript:;" class="max-panel disabled">
+                      <i class="far fa-window-restore"></i>
+                      إستعادة النافذة
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="mini-panel">
+                      <i class="far fa-window-minimize"></i>
+                      تصغير النافذة
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="javascript:;" class="close-panel">
+                      <i class="fas fa-times"></i>
+                      إغلاق النافذة
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="card-body text-center collapse show">
               <div class="status-counter green-bg">
@@ -215,32 +220,32 @@
         <div class="col-sm-6 col-md-3">
           <div class="sm-card">
             <div class="sm-card-header">
-             <div class="panel-wrapper">
-              <button class="card-btn">
-                <i class="fas fa-ellipsis-v"></i>
-              </button>
-              <ul>
-                <li>
-                  <a href="javascript:;" class="max-panel disabled">
-                    <i class="far fa-window-restore"></i>
-                    إستعادة النافذة
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:;" class="mini-panel">
-                    <i class="far fa-window-minimize"></i>
-                    تصغير النافذة
-                  </a>
-                </li>
-                <hr>
-                <li>
-                  <a href="javascript:;" class="close-panel">
-                    <i class="fas fa-times"></i>
-                    إغلاق النافذة
-                  </a>
-                </li>
-              </ul>
-             </div>
+              <div class="panel-wrapper">
+                <button class="card-btn">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul>
+                  <li>
+                    <a href="javascript:;" class="max-panel disabled">
+                      <i class="far fa-window-restore"></i>
+                      إستعادة النافذة
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="mini-panel">
+                      <i class="far fa-window-minimize"></i>
+                      تصغير النافذة
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="javascript:;" class="close-panel">
+                      <i class="fas fa-times"></i>
+                      إغلاق النافذة
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="card-body text-center collapse show">
               <div class="status-counter grey-bg">
@@ -253,9 +258,51 @@
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
-          <div class="sm-card">
+          <div class="sm-card tasks">
             <div class="sm-card-header">
-             <div class="panel-wrapper">
+              <div class="panel-wrapper">
+                <button class="card-btn">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <ul>
+                  <li>
+                    <a href="javascript:;" class="max-panel disabled">
+                      <i class="far fa-window-restore"></i>
+                      إستعادة النافذة
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="mini-panel">
+                      <i class="far fa-window-minimize"></i>
+                      تصغير النافذة
+                    </a>
+                  </li>
+                  <hr>
+                  <li>
+                    <a href="javascript:;" class="close-panel">
+                      <i class="fas fa-times"></i>
+                      إغلاق النافذة
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body text-center collapse show">
+              <div class="status-counter cyan-bg">
+                10
+              </div>
+              <h4>المهام المسندة</h4>
+              <p>تم التحديث منذ ساعة و 32 دقيقة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="row mt-30 mb-30">
+      <div class="col-sm-12 col-md-7">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
               <button class="card-btn">
                 <i class="fas fa-ellipsis-v"></i>
               </button>
@@ -280,24 +327,2451 @@
                   </a>
                 </li>
               </ul>
-             </div>
             </div>
-            <div class="card-body text-center collapse show">
-              <div class="status-counter cyan-bg">
-                10
+            <h4>جدول المهام</h4>
+          </div>
+          <div class="card-body collapse show">
+            <table id="example" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>
+                    <span>اسم عمليه الفحص</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>المهمة</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>حالة المهمة</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+                  <td>تعبئة استبيان فحص ملفات المراجع</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    التقرير تحت دارسة لجنة جودة العمل المهني
+                  </td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم ارسال التقرير للمحاسب القانوني
+                  </td>
+                </tr>
+              </tbody>
+              <!-- <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </tfoot> -->
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-5">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>التنبيهات</h4>
+          </div>
+          <div class="card-body collapse show">
+            <div class="alerts d-flex">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                  aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                  aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                  aria-controls="v-pills-messages" aria-selected="false">Messages</a>
               </div>
-              <h4>المهام المسندة</h4>
-              <p>تم التحديث منذ ساعة و 32 دقيقة</p>
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                  aria-labelledby="v-pills-home-tab">
+                  asdsadasda adsadasdas
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  asdsadasda adsadasdas</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                  asdsadasda adsadasdas</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="row  mt-30 mb-30">
+      <div class="col-sm-12">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>عمليات الفحص المسندة</h4>
+          </div>
+          <div class="card-body collapse show">
+            <table id="example2" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>
+                    <span>رقم الجودة</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+
+                    <span> اسم المكتب</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>المدينة</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+
+                    <span> عدد العمليات المودعة
+                      في برنامج قوائم</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>تاريخ آخر فحص</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>نتيجة آخر فحص</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>طباعة خطاب التوجية</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>استلام التكليف</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23152</td>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+                  <td>
+                    الرياض
+                  </td>
+                  <td>08</td>
+                  <td>‏25 فبراير 2020</td>
+                  <td>
+                    ‏90% إلتزام جوهري
+                    <span class="pop-details">
+                      <i class="fas fa-plus"></i>
+
+                    </span>
+                    <div class="details-card">
+                      ‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب
+                      <span class="separate"></span>
+                      ‏90% مستوى الالتزام الخاص ببيانات المكتب
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <button title="طباعة">
+                      <img src="assets/images/print-btn.png" alt="print">
+                    </button>
+                  </td>
+                  <td class="text-center">
+                    <button title="تعديل">
+                      <img src="assets/images/edit-btn.png" alt="edit">
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+              <!-- <tfoot>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </tfoot> -->
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row  mt-30 mb-30">
+      <div class="col-sm-12 col-md-5">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>إحصائيات العمليات المسندة</h4>
+          </div>
+          <div class="card-body collapse show">
+            <canvas id="myChart" width="600" height="600"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-7">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>جدول المستحقات عن عمليات الفحص المنتهية</h4>
+          </div>
+          <div class="card-body collapse show">
+            <table id="example3" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>
+                    <span>اسم عمليه الفحص</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>حالة صرف المستحقات</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>المبلغ المستحق</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم صرف كامل المبلغ المستحق
+                  </td>
+                  <td>350 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    تم صرف نصف المبلغ المستحق
+                  </td>
+                  <td>200 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+
+                  <td>
+                    <span class="data-icon no-icon"> &nbsp;</span>
+                    لم يتم صرف المستحقات
+                  </td>
+                  <td>1500 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم صرف كامل المبلغ المستحق
+                  </td>
+                  <td>350 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    تم صرف نصف المبلغ المستحق
+                  </td>
+                  <td>200 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+
+                  <td>
+                    <span class="data-icon no-icon"> &nbsp;</span>
+                    لم يتم صرف المستحقات
+                  </td>
+                  <td>1500 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الأستاذ حسن حلمي</td>
+
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم صرف كامل المبلغ المستحق
+                  </td>
+                  <td>350 ريال</td>
+                </tr>
+                <tr>
+                  <td>مكتب الشمراني للمحاسبة القانونية</td>
+
+                  <td>
+                    <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                    تم صرف نصف المبلغ المستحق
+                  </td>
+                  <td>200 ريال</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="total">
+              مجموع المستحقات
+              <span>15550 ريال</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
   <!-- Jquery -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <!-- bootstrap -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- datatable -->
+  <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.fixedColumns.min.js"></script>
+  <!-- chart js -->
+  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var table = $('#example,#example2').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 8,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        }
+      });
+      var noPagingTable = $('#example3').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 8,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        paging: false
+      });
+      $("#slide-toggle").click(function () {
+        setTimeout(() => {
+          table.columns.adjust();
+          table.draw();
+          noPagingTable.columns.adjust();
+          noPagingTable.draw();
+        }, 300);
+      })
+      var data = {
+        labels: [
+          "عمليات الفحص/ الزيارات الميدانية الجديدة",
+          "عمليات الفحص/ الزيارات الميدانية المقفلة",
+          "المهام المسندة",
+          "عمليات الفحص/ الزيارات الميدانية قيد العمل"
+        ],
+        datasets: [
+          {
+            data: [23, 65, 20 ,12],
+            backgroundColor: [
+              "#747576",
+              "#45AE54",
+              "#1D4D8B",
+              "#FF9A26"
+            ],
+            hoverBackgroundColor: [
+            "#747576",
+              "#45AE54",
+              "#1D4D8B",
+              "#FF9A26"
+            ]
+          }]
+      };
+
+      var options = {
+        responsive: true,
+        legend: {
+          display: true
+        }
+      };
+      var ctx = $('#myChart');
+      var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: options
+      })
+      
+    }) 
+  </script>
   <!-- custom Js -->
   <script src="js/custom.js"></script>
 </body>
