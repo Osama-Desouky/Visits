@@ -349,6 +349,7 @@ section.side-nav {
   top: 0;
   right: 0;
   transition: 0.3s;
+  z-index: 999;
   .nav-wrapper {
     height: 100%;
     overflow: auto;

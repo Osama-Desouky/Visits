@@ -5,6 +5,9 @@
       width: 90%;
     }
   }
+  .main-container.container-fluid {
+    width: 100%;
+}
 }
 @media (max-width: 1400px) {
   .login-content {
@@ -41,6 +44,7 @@
       display: none;
     }
   }
+
 }
 
 
