@@ -878,22 +878,364 @@
           <div class="card-body collapse show">
             <div class="alerts d-flex">
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                  aria-controls="v-pills-home" aria-selected="true">Home</a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-                  aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-                  aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                <a class="nav-link active" id="all-notifications-tab" data-toggle="pill" href="#all-notifications"
+                  role="tab" aria-controls="all-notifications" aria-selected="true">كافة التنبيهات</a>
+
+                <a class="nav-link" id="unread-notifications-tab" data-toggle="pill" href="#unread-notifications"
+                  role="tab" aria-controls="unread-notifications" aria-selected="false">تنبيهات غير مقروءة
+                  <span class="count">5</span>
+                </a>
+
+                <a class="nav-link" id="readed-notifications-tab" data-toggle="pill" href="#readed-notifications"
+                  role="tab" aria-controls="readed-notifications" aria-selected="false">تنبيهات مقروءة</a>
               </div>
               <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                  aria-labelledby="v-pills-home-tab">
-                  asdsadasda adsadasdas
+                <div class="tab-pane fade show active" id="all-notifications" role="tabpanel"
+                  aria-labelledby="all-notifications-tab">
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+                            تحويل إلى غير مقروءة
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+                            تحويل إلى غير مقروءة
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+                            تحويل إلى غير مقروءة
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+                            تحويل إلى غير مقروءة
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                  asdsadasda adsadasdas</div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                  asdsadasda adsadasdas</div>
+                <div class="tab-pane fade" id="unread-notifications" role="tabpanel"
+                  aria-labelledby="unread-notifications-tab">
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="notification-card unread">
+                    <h6>مكتب الشمراني للمحاسبة</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ 15 دقيقة</cite>
+                    <div class="panel-wrapper">
+                      <button class="card-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <ul>
+                        <li>
+                          <a href="javascript:;" class="unread disabled">
+                            <i class="far fa-envelope"></i>
+
+                          </a>
+                        </li>
+                        <li>
+                          <a href="javascript:;" class="read-panel">
+                            <i class="fas fa-envelope-open-text"></i>
+                            تحويل إلى مقروءة
+                          </a>
+                        </li>
+                        <hr>
+                        <li>
+                          <a href="javascript:;" class="delete-panel">
+                            <i class="fas fa-times"></i>
+                            حذف
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="readed-notifications" role="tabpanel"
+                  aria-labelledby="readed-notifications-tab">
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                  <div class="notification-card">
+                    <h6>مكتب الأستاذ حسن حلمي</h6>
+                    <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم
+                      سواء</p>
+                    <cite>منذ ساعة و 32 دقيقة</cite>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2741,7 +3083,7 @@
         ],
         datasets: [
           {
-            data: [23, 65, 20 ,12],
+            data: [23, 65, 20, 12],
             backgroundColor: [
               "#747576",
               "#45AE54",
@@ -2749,7 +3091,7 @@
               "#FF9A26"
             ],
             hoverBackgroundColor: [
-            "#747576",
+              "#747576",
               "#45AE54",
               "#1D4D8B",
               "#FF9A26"
@@ -2769,7 +3111,7 @@
         data: data,
         options: options
       })
-      
+
     }) 
   </script>
   <!-- custom Js -->
