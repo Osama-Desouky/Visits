@@ -1,4 +1,4 @@
-@media (max-width: 1600px) {
+@media (max-width: 1599px) {
   .login-content {
     .content-wrap {
       margin: 6% 5% 0 auto;
@@ -44,7 +44,10 @@
       display: none;
     }
   }
-
+  .main-container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 

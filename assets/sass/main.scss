@@ -890,9 +890,9 @@ table.dataTable {
     }
     .sorting {
       background-image: none;
-      span {
-        white-space: normal;
-      }
+      // span {
+      //   white-space: normal;
+      // }
       span.custom-sort {
         background-image: url("../images/sort.png");
         background-position: center center;

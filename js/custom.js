@@ -1,4 +1,12 @@
+$(window).on('load',function() {
+  if ($(window).width() >= 1600) {
+    $(".side-nav").removeClass("closed");
+    $(".main-container").removeClass("full-container");
+    $("#slide-toggle").removeClass("reversed");
+ }
+})
 $(document).ready(function () {
+
   // slider Toggle
   $("#slide-toggle").click(function () {
     $(this).toggleClass("reversed");
