@@ -14,6 +14,7 @@ $(document).ready(function () {
     $(".main-container").toggleClass("full-container");
   });
   $(".pop-details").click(function () {
+    $(this).toggleClass("active")
     $(this).parent().find(".details-card").toggle();
   });
   // Slide Collapse

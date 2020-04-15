@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css"> -->
+  <!-- chart js -->
+  <link rel="stylesheet" href="node_modules/chart.js/dist/Chart.min.css">
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <link rel="stylesheet" href="assets/css/mediaQuery.min.css" />
+
+  <title>Visits - Dashboard</title>
+  <!-- chart -->
+</head>
+
+<body class="dashboard">
+  <section class="side-nav closed">
+    <div class="nav-wrapper">
+      <button type="button" id="slide-toggle" class="reversed">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="nav-logo">
+        <a href="dashboard.html">
+          <img src="assets/images/Group 2323.png" alt="nav-logo" />
+        </a>
+      </div>
+      <div class="user-card">
+        <div class="main-data d-flex">
+          <img src="assets/images/Avatar.png" alt="" />
+          <div class="title">
+            <h6>عبدالله القحطاني</h6>
+            <p>فاحص متفرغ</p>
+          </div>
+        </div>
+        <hr />
+        <div class="sub-data d-flex">
+          <div class="data-box">
+            <h6>عدد العمليات</h6>
+            <p>
+              <span>‏56</span>
+              عملية
+            </p>
+          </div>
+          <div class="data-box">
+            <h6>رابط العقد</h6>
+            <p>
+              <span><img src="assets/images/Group 1380.png" alt="" /></span>
+              العقد
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- menu -->
+      <div id="MainMenu">
+        <div class="list-group panel">
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية</a>
+          <a href="#demo2" class="list-group-item collapsed" data-toggle="collapse">
+            <img src="assets/images/check-icon.png" alt="icon" class="pre-item-icon">
+            الفحص الميداني
+            <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+          </a>
+          <div class="collapse show" id="demo2" data-parent="#MainMenu">
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              خطة الفحص السنوية</a>
+            <a href="javascript:;" class="list-group-item child-item active">
+              <i class="fas fa-chevron-left "></i>
+              عمليات الفحص</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              التقارير</a>
+          </div>
+          <a href="#demo3" class="list-group-item collapsed" data-toggle="collapse">
+            <i class="far fa-building"></i>
+            الزيارات الميدانية
+            <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+          </a>
+          <div class="collapse" id="demo3" data-parent="#MainMenu">
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 1</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 2</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 3</a>
+          </div>
+          <a href="javascript:;" class="list-group-item">
+            <i class="far fa-bell"></i>
+            التنبيهات
+            <span class="nofication-count">3</span>
+          </a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-book-open"></i>
+            مكتبة المعرفة</a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="far fa-envelope"></i>
+            التراسل</a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-cog"></i>
+            إدارة النظام</a>
+        </div>
+      </div>
+      <p class="nav-footer">
+        جميع الحقوق محفوظة لصالح
+        <br>
+        SOCPA © الهيئة السعودية للمحاسبين القانونيين
+      </p>
+      <ul class="logos">
+        <li><img src="assets/images/surface1.png" alt="" /></li>
+        <li><img src="assets/images/2030.png" alt="" /></li>
+        <li><img src="assets/images/Logo.png" alt="" /></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="main-container container-fluid full-container">
+    <header class="top-nav">
+      <h3>عمليات الفحص</h3>
+      <ul class="menu-btns">
+        <li><a href="javascript:;" id="menu-nofi-btn">
+            <img src="assets/images/icon-noti.png" alt="">
+          </a></li>
+        <li><a href="javascript:;">
+            <img src="assets/images/icon-help.png" alt="">
+          </a></li>
+        <li><a href="javascript:;" id="menu-search-btn">
+            <img src="assets/images/icon_search.png" alt="">
+          </a></li>
+      </ul>
+    </header>
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <h4>بيانات عملية الفحص</h4>
+          </div>
+          <div class="card-body">
+            <div class="check-info d-flex">
+              <div class="info-block">
+                <span class="info-title">
+                  <i class="far fa-building"></i>
+                  اسم المكتب
+                </span>
+                <span class="info-data">
+                  مكتب الشمراني للمحاسبة القانونية
+                </span>
+              </div>
+             
+              <div class="info-block">
+                <span class="info-title">
+                  <i class="far fa-calendar-alt"></i>
+                  سنة الفحص
+                </span>
+                <span class="info-data">
+                  2020
+                </span>
+              </div>
+              <div class="info-block">
+                <span class="info-title">
+                  <i class="far fa-calendar-alt"></i>
+                  تاريخ بداية الفحص
+                </span>
+                <span class="info-data">
+                  ‏25 فبراير 2020
+                </span>
+              </div>
+              <div class="info-block">
+                <span class="info-title">
+                  <i class="fas fa-poll"></i>
+                  نتيجة  الفحص
+                </span>
+                <span class="info-data">
+                  ‏90% إلتزام جوهري
+                  <span class="pop-details">
+                    <i class="fas fa-plus"></i>
+                  </span>
+                  <div class="details-card">
+                    <ul>
+                      <li>‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب</li>
+                      <li>‏90% مستوى الالتزام الخاص ببيانات المكتب</li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>مسار عملية الفحص</h4>
+          </div>
+          <div class="card-body collapse show">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tabs -->
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- <h4>مسار عملية الفحص</h4> -->
+          </div>
+          <div class="card-body collapse show">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Jquery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- datatable -->
+  <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.fixedColumns.min.js"></script>
+  <!-- chart js -->
+  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var table = $('#example,#example2').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 8,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        }
+      });
+      var noPagingTable = $('#example3').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 8,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        paging: false
+      });
+      $("#slide-toggle").click(function () {
+        setTimeout(() => {
+          table.columns.adjust();
+          table.draw();
+          noPagingTable.columns.adjust();
+          noPagingTable.draw();
+        }, 300);
+      })
+    }) 
+  </script>
+  <!-- custom Js -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
