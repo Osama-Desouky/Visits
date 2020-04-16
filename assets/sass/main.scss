@@ -1349,10 +1349,9 @@ div#pills-info {
       color: #666666;
       line-height: 24px;
     }
-    
   }
-  .colored{
-      background: #F5F5F9;
+  .colored {
+    background: #f5f5f9;
   }
   .details-card {
     right: auto;
@@ -1381,5 +1380,98 @@ div#pills-info {
         text-align: right;
       }
     }
+  }
+}
+
+.progress-states {
+  padding: 0 15px;
+  position: relative;
+  &:after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: #c8cdd2;
+    position: absolute;
+    top: 20px;
+    right: 14px;
+    z-index: 0;
+  }
+  &:last-child {
+    &:after {
+      content: none;
+    }
+  }
+  .state {
+    display: inline-block;
+    color: #464749;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 28px;
+    padding: 13px 40px;
+    position: relative;
+    z-index: 5;
+    &:after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid #20b79e;
+      background: #fff;
+      right: -10px;
+      top: 18px;
+    }
+  }
+  .process-progress {
+    padding: 60px 30px 130px;
+    .process {
+      .process-title {
+        white-space: normal;
+        width: 95%;
+        font-size: 14px;
+        left: -40%;
+        text-align: center;
+        line-height: 24px;
+      }
+      &:first-child {
+        .process-title {
+          min-width: 130px;
+          width: auto;
+          left: -55px;
+        }
+      }
+    }
+  }
+  button.process-btn {
+    display: block;
+    margin: auto;
+    background: #fff;
+    border: 1px solid #20b79e;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    line-height: 25px;
+    text-align: center;
+    color: #20b79e;
+    margin-top: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.tab-content > .tab-pane {
+  padding: 50px 10px;
+}
+
+.modal {
+  button.close {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 48px;
   }
 }
