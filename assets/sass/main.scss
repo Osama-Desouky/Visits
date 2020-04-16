@@ -1473,5 +1473,28 @@ div#pills-info {
     left: 0;
     top: 4px;
     font-size: 48px;
+    color: #8B8D8F;
   }
+}
+span.data-icon.nope {
+  color: #db5757;
+}
+.modal-title {
+  font-weight: bold;
+  color: #464749;
+}
+
+.modal-body ul {
+  padding-right: 15px;
+  li {
+    list-style: none;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 15px 0;
+  }
+  
+}
+span.data-icon.empty {
+  background: #EDF0F3;
+  border: 2px solid #C8CDD2;
 }

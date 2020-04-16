@@ -1670,7 +1670,7 @@
                         <i class="fas fa-check"></i>
                       </div>
                       <div class="process-title">
-                        اختيار المكتب ضمن خطة  الفحص خلال السنة الحالية
+                        اختيار المكتب ضمن خطة الفحص خلال السنة الحالية
                       </div>
                     </div>
                     <div class="col process">
@@ -1810,33 +1810,38 @@
                         <br>
                         (ان وجد)
                       </div>
-                    </div><div class="col process empty">
+                    </div>
+                    <div class="col process empty">
                       <div class="process-icon ">
                       </div>
                       <div class="process-title">
                         قام الفاحص بإلتعليق على رد المكتب
-                       <br>
+                        <br>
                         ( عند الحاجة )
                       </div>
-                    </div><div class="col process empty">
+                    </div>
+                    <div class="col process empty">
                       <div class="process-icon ">
                       </div>
                       <div class="process-title">
                         قام فريق الفحص بالاعتماد النهائي لملاحظات الفحص
                       </div>
-                    </div><div class="col process empty">
+                    </div>
+                    <div class="col process empty">
                       <div class="process-icon ">
                       </div>
                       <div class="process-title">
                         تم اعتماد تقرير الفحص
                       </div>
-                    </div><div class="col process empty">
+                    </div>
+                    <div class="col process empty">
                       <div class="process-icon ">
                       </div>
                       <div class="process-title">
                         تم اعتماد تقرير مخلص نتائج الفحص
                       </div>
-                    </div><div class="col process empty">
+                    </div>
+                    <div class="col process empty">
                       <div class="process-icon ">
                       </div>
                       <div class="process-title">
@@ -1856,13 +1861,13 @@
                     <!-- add latest class to the last active process to give it a green border -->
                     <div class="process empty">
                       <div class="process-icon">
-                      
+
                       </div>
                       <div class="process-title">
                         تم اعتماد صرف المستحقات المالية للفاحص غير المتفرغ
                       </div>
                     </div>
-                
+
                     <div class="col process empty">
                       <div class="process-icon ">
                       </div>
@@ -1912,64 +1917,228 @@
         </div>
       </div>
     </div>
-<!-- reportForTeam-modal -->
-<div class="modal fade bd-example-modal-lg" id="reportForTeam-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLongTitle">ابلاغ فريق الفحص</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
+    <!-- reportForTeam-modal -->
+    <div class="modal fade bd-example-modal-lg" id="reportForTeam-modal" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLongTitle">ابلاغ فريق الفحص</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table id="example3" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>
+                    <span>اسم الفاحص</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>نوع الفاحص</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>اعتماد اقرار الاستقلالية</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>اعتمادالعقل</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                  <th>
+                    <span>اعتماد التكليف</span>
+                    <span class="custom-sort"></span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon empty"></span>
+                    لم يتم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon empty"></span>
+                    لم يتم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon empty"></span>
+                    لم يتم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+                <tr>
+                  <td>عبدالله بن متعب القحطاني</td>
+                  <td>متفرغ</td>
+                  <td>
+                    <span class="data-icon"><i class="fas fa-check"></i></span>
+                    تم
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                  <td>
+                    <span class="data-icon nope"><i class="fas fa-minus"></i></span>
+                    لا ينطبق
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- officeTasks-modal -->
-<div class="modal fade" id="officeTasks-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    <!-- officeTasks-modal -->
+    <div class="modal fade bd-example-modal-lg" id="officeTasks-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLongTitle">استلام النماذج من المكتب</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                <span class="data-icon"><i class="fas fa-check"></i></span>
+                قام المكتب بتعيين ضابط الاتصال
+              </li>
+              <li>
+                <span class="data-icon"><i class="fas fa-check"></i></span>
+                قام المكتب بتعيين ضابط الاتصال
+              </li>
+              <li>
+                <span class="data-icon"><i class="fas fa-check"></i></span>
+                قام المكتب بتعيين ضابط الاتصال
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- surveys-modal -->
-<div class="modal fade" id="surveys-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    <!-- surveys-modal -->
+    <div class="modal fade bd-example-modal-lg" id="surveys-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLongTitle">قائمة الإستبيانات</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                <span class="data-icon"><i class="fas fa-check"></i></span>
+                استبيان فحص ملفات المراجعة
+              </li>
+              <li>
+                <span class="data-icon empty"></span>
+                استبيان فحص الرقابة النوعية
+              </li>
+              <li>
+                <span class="data-icon empty"></span>
+                استبيان بيانات المكتب
+              </li>
+              <li>
+                <span class="data-icon empty"></span>
+                استبيان مكافحة غسل الأموال
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   </div>
   <!-- Jquery -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -2016,6 +2185,17 @@
         },
         columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] }, { orderable: false, targets: [0] }]
       });
+      var noPagingTable = $('#example3').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 8,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        paging: false
+      });
+      getNoPagingTable = () => noPagingTable;
       getTable2 = () => table2;
       resetTables(300);
       $("#slide-toggle").click(function () {
@@ -2025,6 +2205,9 @@
     $(".nav-link").click(function () {
       resetTables(200)
     })
+    $(".process-btn").click(function(){
+      resetTables(300)
+    })
     function resetTables(timeOut) {
       console.log('ss');
 
@@ -2033,6 +2216,8 @@
         getTable().draw();
         getTable2().columns.adjust();
         getTable2().draw();
+        getNoPagingTable().columns.adjust();
+        getNoPagingTable().draw();
       }, timeOut);
     }
   </script>
