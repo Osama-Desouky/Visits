@@ -138,15 +138,17 @@
           </a></li>
       </ul>
     </header>
+    <!-- بيانات عملية الفحص -->
     <div class="row">
       <div class="col-sm-12 mt-30 mb-30">
-        <div class="regular-card">
+        <div class="regular-card blue-border">
           <div class="reg-card-header">
             <h4>بيانات عملية الفحص</h4>
           </div>
           <div class="card-body">
-            <div class="check-info d-flex">
-              <div class="info-block">
+            <div class="check-info d-flex row">
+
+              <div class="info-block col-lg-6">
                 <span class="info-title">
                   <i class="far fa-building"></i>
                   اسم المكتب
@@ -155,8 +157,8 @@
                   مكتب الشمراني للمحاسبة القانونية
                 </span>
               </div>
-             
-              <div class="info-block">
+
+              <div class="info-block col-lg-6">
                 <span class="info-title">
                   <i class="far fa-calendar-alt"></i>
                   سنة الفحص
@@ -165,7 +167,8 @@
                   2020
                 </span>
               </div>
-              <div class="info-block">
+
+              <div class="info-block col-lg-6">
                 <span class="info-title">
                   <i class="far fa-calendar-alt"></i>
                   تاريخ بداية الفحص
@@ -174,10 +177,11 @@
                   ‏25 فبراير 2020
                 </span>
               </div>
-              <div class="info-block">
+
+              <div class="info-block col-lg-6">
                 <span class="info-title">
                   <i class="fas fa-poll"></i>
-                  نتيجة  الفحص
+                  نتيجة الفحص
                 </span>
                 <span class="info-data">
                   ‏90% إلتزام جوهري
@@ -197,6 +201,8 @@
         </div>
       </div>
     </div>
+
+    <!-- مسار عملية الفحص -->
     <div class="row">
       <div class="col-sm-12 mt-30 mb-30">
         <div class="regular-card">
@@ -230,7 +236,41 @@
             <h4>مسار عملية الفحص</h4>
           </div>
           <div class="card-body collapse show">
+            <div class="process-progress row">
+              <!-- process by default is active , add empty class to make it inactive -->
+              <!-- add latest class to the last active process to give it a green border -->
+              <div class="process">
+                <div class="process-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="process-title">
+                  قبل عملية الفحص
+                </div>
+              </div>
+              <div class="col process latest">
+                <div class="process-icon ">
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="process-title">
+                  أثناء عملية الفحص
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  بعد عملية الفحص
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  إغلاق عملية الفحص
+                </div>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
@@ -267,24 +307,1318 @@
                 </li>
               </ul>
             </div>
-            <!-- <h4>مسار عملية الفحص</h4> -->
+            <h4>&nbsp;</h4>
           </div>
           <div class="card-body collapse show">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul class="nav  mb-3 justify-content-center check-pills" id="pills-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                <a class="nav-link active" id="pills-tasks-tab" data-toggle="pill" href="#pills-tasks" role="tab"
+                  aria-controls="pills-tasks" aria-selected="true">
+                  <img src="assets/images/tab-tasks-icon.png" alt="">
+                  المهام
+                  <span class="count">3</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link" id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab"
+                  aria-controls="pills-info" aria-selected="false">
+                  <i class="far fa-building"></i>
+                  بيانات المكتب
+
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                <a class="nav-link" id="pills-team-tab" data-toggle="pill" href="#pills-team" role="tab"
+                  aria-controls="pills-team" aria-selected="false">
+                  <i class="fas fa-users"></i>
+                  فريق الفحص
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-progess-tab" data-toggle="pill" href="#pills-progess" role="tab"
+                  aria-controls="pills-progess" aria-selected="false">
+                  <img src="assets/images/tab-progress-icon.png" alt="">
+                  سير عملية الفحص
+                </a>
               </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+              <div class="tab-pane fade show active" id="pills-tasks" role="tabpanel" aria-labelledby="pills-tasks-tab">
+                <table id="task-table" class="table table-striped" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span>كود المهمة</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+
+                        <span>اسم المهمة</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+                        <span>حالة المهمة</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+
+                        <span> تعديل</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+                        <span>حذف</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>01</td>
+                      <td>تعبئة استبيان فحص ملفات المراجع</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                        التقرير تحت دارسة لجنة جودة العمل المهني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>02</td>
+                      <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                      <td>
+                        <span class="data-icon"><i class="fas fa-check"></i></span>
+                        تم ارسال التقرير للمحاسب القانوني
+                      </td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                      <td>
+                        <button title="حذف">
+                          <img src="assets/images/delete-btn.png" alt="delete">
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                  <!-- <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+              <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                <div class="row">
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="data-item">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-list-ol"></i>
+                          رقم الجودة
+                        </div>
+                        <div class="col data">
+                          23152
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="data-item">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-building"></i>
+                          اسم المكتب
+                        </div>
+                        <div class="col data">
+                          مكتب الشمراني للمحاسبة القانونية
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="data-item">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-map-marker-alt"></i>
+                          المدينة
+                        </div>
+                        <div class="col data">
+                          الرياض
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-xl-4 colored">
+                    <div class="data-item ">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-list-ol"></i>
+                          عدد العمليات المودعة ببرنامج قوائم
+                        </div>
+                        <div class="col data">
+                          ‏90% إلتزام جوهري
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xl-4 colored">
+                    <div class="data-item">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-list-ol"></i>
+                          عدد مرات الفحص السابقة
+                        </div>
+                        <div class="col data">
+                          ‏5 مرات
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-xl-4 colored">
+                    <div class="data-item ">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-calendar-alt"></i>
+                          تاريخ آخر فحص تم على المكتب
+                        </div>
+                        <div class="col data">
+                          ‏25 فبراير 2020
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-xl-4">
+                    <div class="data-item">
+                      <div class="row">
+                        <div class="col title">
+                          <i class="fas fa-poll"></i>
+                          نتيجة الفحص السابق للمكتب
+                        </div>
+                        <div class="col data">
+                          ‏90% إلتزام جوهري
+                          <span class="pop-details">
+                            <i class="fas fa-plus"></i>
+                          </span>
+                          <div class="details-card">
+                            <ul>
+                              <li>‏90% مستوى الالتزام بنظام مكافحة غسل الأموال وتمويل الإرهاب</li>
+                              <li>‏90% مستوى الالتزام الخاص ببيانات المكتب</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-team" role="tabpanel" aria-labelledby="pills-team-tab">
+                <table id="team-table" class="table table-striped" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th class="text-center">
+                        <span>#</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+
+                        <span>اسم الفاحص</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+                        <span>الجنسية</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+                        <span>رقم الهوية/ الإقامة</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+                        <span>الدور</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                      <th>
+
+                        <span> تعديل</span>
+                        <span class="custom-sort"></span>
+                      </th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr> <tr>
+                      <td class="text-center"><i class="far fa-user"></i></td>
+                      <td>عبدالله بن متعب القحطاني</td>
+                      <td>سعودي</td>
+                      <td>1232545641</td>
+                      <td>رئيس فريق الفحص</td>
+                      <td>
+                        <button title="تعديل">
+                          <img src="assets/images/edit-btn.png" alt="edit">
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                  <!-- <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+              <div class="tab-pane fade" id="pills-progess" role="tabpanel" aria-labelledby="pills-progess-tab">...
+              </div>
             </div>
           </div>
         </div>
@@ -304,7 +1638,7 @@
 
   <script>
     $(document).ready(function () {
-      var table = $('#example,#example2').DataTable({
+      var table = $('#task-table').DataTable({
         searching: false,
         lengthChange: false,
         pageLength: 8,
@@ -317,9 +1651,11 @@
             next: '<i class="fas fa-chevron-left"></i>',
             previous: '<i class="fas fa-chevron-right"></i>'
           }
-        }
+        },
+        columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] }]
       });
-      var noPagingTable = $('#example3').DataTable({
+      getTable = ()=>table;
+      var table2 = $('#team-table').DataTable({
         searching: false,
         lengthChange: false,
         pageLength: 8,
@@ -327,17 +1663,34 @@
         order: [],
         scrollX: true,
         scrollCollapse: true,
-        paging: false
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        },
+        columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] },{ orderable: false, targets: [0] }]
       });
+      getTable2 = ()=>table2;
+      resetTables(300);
       $("#slide-toggle").click(function () {
-        setTimeout(() => {
-          table.columns.adjust();
-          table.draw();
-          noPagingTable.columns.adjust();
-          noPagingTable.draw();
-        }, 300);
+        resetTables(300)
       })
     }) 
+    $(".nav-link").click(function(){
+      resetTables(200)
+    })
+    function resetTables(timeOut)
+    {
+      console.log('ss');
+      
+      setTimeout(() => {
+        getTable().columns.adjust();
+        getTable().draw();
+        getTable2().columns.adjust();
+        getTable2().draw();
+      }, timeOut);
+    }
   </script>
   <!-- custom Js -->
   <script src="js/custom.js"></script>

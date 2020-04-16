@@ -31,6 +31,12 @@
     }
   }
 }
+@media (min-width:1200px){
+  .info-block{
+    max-width: initial;
+    width: auto;
+  }
+}
 @media (max-width: 1199px) {
   .login-content {
     display: none;
@@ -51,8 +57,23 @@
   // .check-info{
   //   flex-direction: column;
   // }
+  .check-info .info-block:last-child span.info-data{
+    text-align: center;
+  }
+  .check-info .info-block span.info-data .details-card:after{
+    left:auto
+  }
+  div#pills-info .colored{
+    background: none;
+  }
 }
-
+@media (max-width:991px)
+{
+  .process-progress .process .process-title{
+    font-size: 12px;
+    left: -30px;
+  }
+}
 
 @media (max-width:468px){
   .login-form .form-wrap{

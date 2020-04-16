@@ -3043,7 +3043,7 @@
 
   <script>
     $(document).ready(function () {
-      var table = $('#example,#example2').DataTable({
+      var table = $('#example').DataTable({
         searching: false,
         lengthChange: false,
         pageLength: 8,
@@ -3057,6 +3057,22 @@
             previous: '<i class="fas fa-chevron-right"></i>'
           }
         }
+      });
+      var table2 = $('#example2').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 8,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        },
+        columnDefs: [ { orderable: false, targets: [-1] },{ orderable: false, targets: [-2] }]
       });
       var noPagingTable = $('#example3').DataTable({
         searching: false,
@@ -3074,8 +3090,18 @@
           table.draw();
           noPagingTable.columns.adjust();
           noPagingTable.draw();
+          table2.columns.adjust();
+          table2.draw();
         }, 300);
       })
+      setTimeout(() => {
+          table.columns.adjust();
+          table.draw();
+          noPagingTable.columns.adjust();
+          noPagingTable.draw();
+          table2.columns.adjust();
+          table2.draw();
+        }, 300);
       var data = {
         labels: [
           "عمليات الفحص/ الزيارات الميدانية الجديدة",
