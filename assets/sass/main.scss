@@ -580,6 +580,7 @@ section.side-nav.closed {
   padding-left: 30px;
   padding-right: 30px;
   overflow-y: auto;
+
 }
 .main-container.full-container {
   margin-right: 0;
@@ -1514,4 +1515,9 @@ span.data-icon.empty {
   &:hover{
     opacity: 1;
   }
+}
+footer{
+  height: 18px;
+  background: #45AE54;
+  margin: 0 -30px;
 }
