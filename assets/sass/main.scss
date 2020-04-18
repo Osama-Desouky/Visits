@@ -1498,3 +1498,20 @@ span.data-icon.empty {
   background: #EDF0F3;
   border: 2px solid #C8CDD2;
 }
+#scroll-up-button{
+  background: none;
+  border: none;
+  background-color: #45AE54;
+  opacity: 0.4;
+  width: 52px;
+  height: 52px;
+  border-radius: 6px;
+  position: fixed;
+  left: 30px;
+  bottom: 25px;
+  transition: 0.3s;
+  display: none;
+  &:hover{
+    opacity: 1;
+  }
+}

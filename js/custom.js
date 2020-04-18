@@ -7,6 +7,20 @@ $(window).on('load',function() {
 })
 $(document).ready(function () {
 
+$('#scroll-up-button').click(function(){
+  console.log('ss');
+  
+  $('html, body, .main-container').animate({ scrollTop: 0 }, 600);
+});
+  $('.main-container').scroll(function() {
+
+    
+    if ($(this).scrollTop() > 300) {
+        $('#scroll-up-button').fadeIn();
+    } else {
+        $('#scroll-up-button').fadeOut();
+    }
+});
   // slider Toggle
   $("#slide-toggle").click(function () {
     $(this).toggleClass("reversed");
@@ -93,4 +107,5 @@ $(document).ready(function () {
     menuBoxHide(element);
     noificationCard.remove();
   }
+
 });
