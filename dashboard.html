@@ -2892,8 +2892,10 @@
             </div>
             <h4>إحصائيات العمليات المسندة</h4>
           </div>
-          <div class="card-body collapse show">
-            <canvas id="myChart" width="600" height="600"></canvas>
+          <div class="card-body collapse show ">
+           <div class="canvas-wrapper">
+            <canvas id="myChart" width="500" height="400"></canvas>
+           </div>
           </div>
         </div>
       </div>
@@ -3132,9 +3134,19 @@
       };
 
       var options = {
-        responsive: true,
+        responsive: false,
         legend: {
-          display: true
+          display: true,
+          position:'left',
+          rtl:true,
+          align:'end',
+          fullWidth:true,
+          labels:{
+            fontFamily:'almarai',
+            fontSize:14,
+            fontColor:'#464749',
+            usePointStyle:true
+          }
         }
       };
       var ctx = $('#myChart');

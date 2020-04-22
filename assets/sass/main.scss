@@ -1521,3 +1521,13 @@ footer{
   background: #45AE54;
   margin: 0 -30px;
 }
+#myChart{
+  display: block;
+  margin: auto;
+  margin-top: 0;
+}
+.canvas-wrapper{
+  display: flex;
+  min-height: 485px;
+  overflow: hidden;
+}
