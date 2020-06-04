@@ -6,9 +6,7 @@ $(window).on('load',function() {
  }
 })
 $(document).ready(function () {
-
 $('#scroll-up-button').click(function(){
-  console.log('ss');
   
   $('html, body, .main-container').animate({ scrollTop: 0 }, 600);
 });

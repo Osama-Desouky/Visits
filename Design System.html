@@ -1,0 +1,2504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css"> -->
+   <!-- datepicker -->
+   <link rel="stylesheet" href="node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css">
+    <!-- range slider -->
+  <link rel="stylesheet" href="node_modules/bootstrap-slider/dist/css/bootstrap-slider.min.css">
+  <!-- chart js -->
+  <link rel="stylesheet" href="node_modules/chart.js/dist/Chart.min.css">
+  <link rel="stylesheet" href="assets/css/custom-select.min.css" />
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <link rel="stylesheet" href="assets/css/mediaQuery.min.css" />
+  <style>
+    .bs-tooltip-auto[x-placement^=top] .arrow::before,
+    .bs-tooltip-top .arrow::before {
+      border-top-color: #051C3A;
+      /* Red */
+    }
+
+    .tooltip-inner {
+      background-color: #051C3A;
+      max-width: 360px;
+      padding: .75rem;
+    }
+  </style>
+  <title>Visits - Dashboard</title>
+  <!-- chart -->
+</head>
+
+<body class="dashboard">
+  <section class="side-nav closed">
+    <div class="nav-wrapper">
+      <button type="button" id="slide-toggle" class="reversed">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="nav-logo">
+        <a href="dashboard.html">
+          <img src="assets/images/Group 2323.png" alt="nav-logo" />
+        </a>
+      </div>
+      <div class="user-card">
+        <div class="main-data d-flex">
+          <img src="assets/images/Avatar.png" alt="" />
+          <div class="title">
+            <h6>عبدالله القحطاني</h6>
+            <p>فاحص متفرغ</p>
+          </div>
+        </div>
+        <hr />
+        <div class="sub-data d-flex">
+          <div class="data-box">
+            <h6>عدد العمليات</h6>
+            <p>
+              <span>‏56</span>
+              عملية
+            </p>
+          </div>
+          <div class="data-box">
+            <h6>رابط العقد</h6>
+            <p>
+              <span><img src="assets/images/Group 1380.png" alt="" /></span>
+              العقد
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- menu -->
+      <div id="MainMenu">
+        <div class="list-group panel">
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية</a>
+          <a href="#demo2" class="list-group-item collapsed" data-toggle="collapse">
+            <img src="assets/images/check-icon.png" alt="icon" class="pre-item-icon">
+            الفحص الميداني
+            <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+          </a>
+          <div class="collapse show" id="demo2" data-parent="#MainMenu">
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              خطة الفحص السنوية</a>
+            <a href="javascript:;" class="list-group-item child-item active">
+              <i class="fas fa-chevron-left "></i>
+              عمليات الفحص</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              التقارير</a>
+          </div>
+          <a href="#demo3" class="list-group-item collapsed" data-toggle="collapse">
+            <i class="far fa-building"></i>
+            الزيارات الميدانية
+            <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+          </a>
+          <div class="collapse" id="demo3" data-parent="#MainMenu">
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 1</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 2</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 3</a>
+          </div>
+          <a href="javascript:;" class="list-group-item">
+            <i class="far fa-bell"></i>
+            التنبيهات
+            <span class="nofication-count">3</span>
+          </a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-book-open"></i>
+            مكتبة المعرفة</a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="far fa-envelope"></i>
+            التراسل</a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-cog"></i>
+            إدارة النظام</a>
+        </div>
+      </div>
+      <p class="nav-footer">
+        جميع الحقوق محفوظة لصالح
+        <br>
+        SOCPA © الهيئة السعودية للمحاسبين القانونيين
+      </p>
+      <ul class="logos">
+        <li><img src="assets/images/surface1.png" alt="" /></li>
+        <li><img src="assets/images/2030.png" alt="" /></li>
+        <li><img src="assets/images/Logo.png" alt="" /></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="main-container container-fluid full-container">
+    <header class="top-nav">
+      <h3>عناصر التصميم</h3>
+      <ul class="menu-btns">
+        <li><a href="javascript:;" id="menu-nofi-btn">
+            <img src="assets/images/icon-noti.png" alt="">
+          </a></li>
+        <li><a href="javascript:;">
+            <img src="assets/images/icon-help.png" alt="">
+          </a></li>
+        <li><a href="javascript:;" id="menu-search-btn">
+            <img src="assets/images/icon_search.png" alt="">
+          </a></li>
+      </ul>
+    </header>
+    <header class="inner-main-title d-flex mt-30  mb-30">
+      <h1>النصوص
+        Typography
+      </h1>
+      <div class="side-line"></div>
+    </header>
+    <div class="row mb-30">
+      <div class="col-12 col-md-6 col-xl-3">
+        <h1 class="custom">عنوان بوتستراب
+          .h1
+        </h1>
+        <h2 class="custom">عنوان بوتستراب
+          .h2
+        </h2>
+        <h3 class="custom">عنوان بوتستراب
+          .h3
+        </h3>
+        <h4 class="custom">عنوان بوتستراب
+          .h4
+        </h4>
+        <h5 class="custom">
+          عنوان بوتستراب
+          .h5
+        </h5>
+        <h6 class="custom">
+          عنوان بوتستراب
+          .h6
+        </h6>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <h1 class="custom primary">عنوان بوتستراب
+          .h1
+        </h1>
+        <h2 class="custom primary">عنوان بوتستراب
+          .h2
+        </h2>
+        <h3 class="custom primary">عنوان بوتستراب
+          .h3
+        </h3>
+        <h4 class="custom primary">عنوان بوتستراب
+          .h4
+        </h4>
+        <h5 class="custom primary">
+          عنوان بوتستراب
+          .h5
+        </h5>
+        <h6 class="custom primary">
+          عنوان بوتستراب
+          .h6
+        </h6>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <h1 class="custom gray">عنوان بوتستراب
+          .h1
+        </h1>
+        <h2 class="custom gray">عنوان بوتستراب
+          .h2
+        </h2>
+        <h3 class="custom gray">عنوان بوتستراب
+          .h3
+        </h3>
+        <h4 class="custom gray">عنوان بوتستراب
+          .h4
+        </h4>
+        <h5 class="custom gray">
+          عنوان بوتستراب
+          .h5
+        </h5>
+        <h6 class="custom gray">
+          عنوان بوتستراب
+          .h6
+        </h6>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <h1 class="custom green">عنوان بوتستراب
+          .h1
+        </h1>
+        <h2 class="custom green">عنوان بوتستراب
+          .h2
+        </h2>
+        <h3 class="custom green">عنوان بوتستراب
+          .h3
+        </h3>
+        <h4 class="custom green">عنوان بوتستراب
+          .h4
+        </h4>
+        <h5 class="custom green">
+          عنوان بوتستراب
+          .h5
+        </h5>
+        <h6 class="custom green">
+          عنوان بوتستراب
+          .h6
+        </h6>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12 col-md-6">
+        <p class="normal">نص فقرة عادي -- لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه
+          وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ...
+          وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة
+          للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات
+          للتصميم الاساسي.
+        </p>
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="main">نص فقرة رئيسي -- لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه
+          وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ...
+          وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة
+          للتصميم ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات
+          للتصميم الاساسي.
+        </p>
+      </div>
+    </div>
+    <header class="inner-main-title d-flex mb-30">
+      <h1>القوائم
+        Lists
+      </h1>
+      <div class="side-line"></div>
+    </header>
+    <div class="row mb-30">
+      <div class="col-12 col-lg-4">
+        <ul class="dotted">
+          <li>الحيادية</li>
+          <li>التكامل مع الشركاء</li>
+          <li>الاتقان</li>
+          <li>الشفافية</li>
+          <li>الإبداع</li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <ul class="dotted green">
+          <li>الحيادية</li>
+          <li>التكامل مع الشركاء</li>
+          <li>الاتقان</li>
+          <li>الشفافية</li>
+          <li>الإبداع</li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <ol class="number">
+          <li>الحيادية</li>
+          <li>التكامل مع الشركاء</li>
+          <li>الاتقان</li>
+          <li>الشفافية</li>
+          <li>الإبداع</li>
+        </ol>
+      </div>
+    </div>
+    <header class="inner-main-title d-flex mb-30">
+      <h1>الجداول
+        Tables
+      </h1>
+      <div class="side-line"></div>
+    </header>
+
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>عمليات الفحص المسندة</h4>
+          </div>
+          <div class="card-body collapse show">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-9">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <form action="" class="top-search-form">
+                      <label for="news-search">ابحث عن عنصر</label>
+                      <input type="text" name="news" id="news-search" placeholder="ابحث ...">
+                      <button></button>
+                    </form>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="custom-select-box text-left">
+                      <label for="filter-select text-right">عرض</label>
+                      <div class="custom-filter-select text-right" style="width:200px;">
+                        <select id="filter-select">
+                          <!-- placeholder -->
+                          <option value="5">5 سجلات</option>
+    
+                          <option value="10">10 سجلات</option>
+                          <option value="15">15 سجل</option>
+                          <option value="20">20 سجل</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <button class="btn btn-primary custom ml-2 mb-3">
+                  <i class="fas fa-eye"></i>
+                  عرض
+                </button>
+                <button class="btn btn-success custom ml-2 mb-3">
+                  <i class="fas fa-plus"></i>
+                  إضافة
+                </button>
+                <button class="btn btn-dark custom mb-3">
+                  <i class="fas fa-times"></i>
+                  إلغاء
+                </button>
+              </div>
+            </div>
+         
+              <table id="task-table" class="table table-striped" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>
+                      <span>كود المهمة</span>
+                      <span class="custom-sort"></span>
+                    </th>
+                    <th>
+        
+                      <span>اسم المهمة</span>
+                      <span class="custom-sort"></span>
+                    </th>
+                    <th>
+                      <span>حالة المهمة</span>
+                      <span class="custom-sort"></span>
+                    </th>
+                    <th>
+        
+                      <span> تعديل</span>
+                      <span class="custom-sort"></span>
+                    </th>
+                    <th>
+                      <span>حذف</span>
+                      <span class="custom-sort"></span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>تعبئة استبيان فحص ملفات المراجع</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                      التقرير تحت دارسة لجنة جودة العمل المهني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                    <td>
+                      <span class="data-icon"><i class="fas fa-check"></i></span>
+                      تم ارسال التقرير للمحاسب القانوني
+                    </td>
+                    <td>
+                      <button title="تعديل">
+                        <img src="assets/images/edit-btn.png" alt="edit">
+                      </button>
+                    </td>
+                    <td>
+                      <button title="حذف">
+                        <img src="assets/images/delete-btn.png" alt="delete">
+                      </button>
+                    </td>
+                  </tr>
+        
+                </tbody>
+                <!-- <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                  </tr>
+                </tfoot> -->
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h4>عمليات الفحص المسندة</h4>
+          </div>
+          <div class="card-body collapse show">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-9">
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <form action="" class="top-search-form">
+                      <label for="news-search">ابحث عن عنصر</label>
+                      <input type="text" name="news" id="news-search" placeholder="ابحث ...">
+                      <button></button>
+                    </form>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="custom-select-box text-left">
+                      <label for="filter-select text-right">ترتيب العناصر</label>
+                      <div class="custom-filter-select text-right" style="width:200px;">
+                        <select id="filter-select">
+                          <!-- placeholder -->
+                          <option value="0">الأحدث</option>
+    
+                          <option value="1">الأحدث</option>
+                          <option value="2">الأكثر قراءة</option>
+                          <option value="3">ترتيب أبجدي</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <button class="btn btn-primary custom ml-2 mb-3">
+                  <i class="fas fa-eye"></i>
+                  عرض
+                </button>
+                <button class="btn btn-success custom ml-2 mb-3">
+                  <i class="fas fa-plus"></i>
+                  إضافة
+                </button>
+                <button class="btn btn-dark custom mb-3">
+                  <i class="fas fa-times"></i>
+                  إلغاء
+                </button>
+              </div>
+            </div>
+         <div class="table-green">
+          <table id="task-table-green" class="table table-striped" style="width:100%">
+            <thead>
+              <tr>
+                <th>
+                  <span>كود المهمة</span>
+                  <span class="custom-sort"></span>
+                </th>
+                <th>
+    
+                  <span>اسم المهمة</span>
+                  <span class="custom-sort"></span>
+                </th>
+                <th>
+                  <span>حالة المهمة</span>
+                  <span class="custom-sort"></span>
+                </th>
+                <th>
+    
+                  <span> تعديل</span>
+                  <span class="custom-sort"></span>
+                </th>
+                <th>
+                  <span>حذف</span>
+                  <span class="custom-sort"></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>تعبئة استبيان فحص ملفات المراجع</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-ellipsis-h"></i></span>
+                  التقرير تحت دارسة لجنة جودة العمل المهني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>تعبئة استبيان فحص الرقابة النوعية</td>
+                <td>
+                  <span class="data-icon"><i class="fas fa-check"></i></span>
+                  تم ارسال التقرير للمحاسب القانوني
+                </td>
+                <td>
+                  <button title="تعديل">
+                    <img src="assets/images/edit-btn.png" alt="edit">
+                  </button>
+                </td>
+                <td>
+                  <button title="حذف">
+                    <img src="assets/images/delete-btn.png" alt="delete">
+                  </button>
+                </td>
+              </tr>
+    
+            </tbody>
+            <!-- <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot> -->
+          </table>
+         </div>
+          
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="inner-main-title d-flex mb-30">
+      <h1>الرسائل
+        Alerts
+      </h1>
+      <div class="side-line"></div>
+    </header>
+    <div class="container">
+      <div class="alert d-flex bordered info" role="alert">
+        <img src="assets/images/info-white-icon.svg" alt="">
+        <p> لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+          تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت</p>
+      </div>
+      <div class="alert d-flex primary" role="alert">
+        <img src="assets/images/info-white-icon.svg" alt="">
+        <p> لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+          تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت</p>
+      </div>
+      <div class="alert d-flex bordered warning" role="alert">
+        <img src="assets/images/info-gray-icon.svg" alt="">
+        <div>
+          <h6>رسالة معلومات</h6>
+          <p>
+            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+            تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت</p>
+        </div>
+      </div>
+      <div class="alert danger" role="alert">
+        <h6>رسالة خطأ</h6>
+        <p>
+          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+          تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت</p>
+        <button><img src="assets/images/cross-icon.svg" alt=""></button>
+      </div>
+      <div class="alert success" role="alert">
+        <h6>رسالة تم بنجاح</h6>
+        <p>
+          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+          تصاميم مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت</p>
+        <button><img src="assets/images/cross-icon.svg" alt=""></button>
+      </div>
+      <div class="gray-bg pt-5 pb-5">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="alert-card">
+              <div class="alert-icon">
+                <img src="assets/images/info-icon.png" alt="">
+              </div>
+              <h5>رسالة معلومات</h5>
+              <p>رسالة معلومات , مع زر نعم / لا</p>
+              <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على </p>
+              <div class="text-center">
+                <button class="btn btn-success custom">نعم</button>
+                <button class="btn btn-danger custom">لا</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="alert-card">
+              <div class="alert-icon">
+                <img src="assets/images/success-icon.png" alt="">
+              </div>
+              <h5>رسالة تمت المعاملة بنجاح</h5>
+              <p>رسالة معلومات , مع زر نعم / لا</p>
+              <p>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على </p>
+              <div class="text-center">
+                <button class="btn btn-primary custom">موافق</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="inner-main-title d-flex mb-30">
+      <h1>الأزرار
+        Buttons
+      </h1>
+      <div class="side-line"></div>
+    </header>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <button class="btn btn-primary custom ml-3 mb-3">
+          موافق
+        </button>
+        <button class="btn btn-success custom ml-3 mb-3">
+          نعم
+        </button>
+        <button class="btn btn-danger custom ml-3 mb-3">
+          لا
+        </button>
+        <button class="btn btn-dark custom ml-3 mb-3">
+          الغاء
+        </button>
+        <button class="btn btn-info custom ml-3 mb-3">
+          التفاصيل
+        </button>
+        <br>
+        <button class="btn btn-primary custom ml-3 mb-3">
+          <i class="fas fa-eye"></i>
+          عرض
+        </button>
+        <button class="btn btn-success custom ml-3 mb-3">
+          <i class="fas fa-plus"></i>
+          إضافة
+        </button>
+        <button class="btn btn-dark custom ml-3 mb-3">
+          <i class="fas fa-times"></i>
+          إلغاء
+        </button>
+        <button class="btn btn-plus ml-3 mb-3"> <i class="fas fa-plus"></i></button>
+        <button class="btn btn-times ml-3 mb-3"> <i class="fas fa-times"></i></button>
+      </div>
+      <div class="col-12 col-lg-6">
+        <button class="btn btn-primary custom ml-2 mb-3">
+          المزيد
+          <img src="assets/images/more-icon.svg" alt="">
+        </button>
+        <button class="btn btn-success custom ml-2 mb-3">
+          <i class="far fa-calendar-plus"></i>
+          أضف إلى التقويم
+        </button>
+        <button class="btn btn-primary custom ml-2 mb-3">
+          <img src="assets/images/plus-circle-icon.svg" alt="">
+          إضافة عنصر
+        </button>
+        <button class="btn btn-danger custom ml-2 mb-3">
+          <i class="fas fa-times"></i>
+          حذف عنصر
+        </button>
+        <button class="btn btn-secondary custom  mb-3">
+          <i class="fas fa-map-marker-alt"></i>
+          إستعراض الموقع
+        </button>
+        <br>
+        <button class="btn btn-gray custom ml-2 mb-3">
+          <i class="fas fa-reply"></i>
+          إعادة إرسال إلى إدارة الجودة للتعديل
+        </button>
+        <button class="btn btn-success custom ml-2 mb-3">
+          <i class="fas fa-check-circle"></i>
+          إعتمد عينة المكاتب
+        </button>
+
+        <input type="file" id="file1" class="inputfile" />
+        <label for="file1" class="btn btn-primary custom  ml-2 mb-3">
+          <i class="fas fa-cloud-upload-alt"></i>
+          إرفاق ملف
+        </label>
+      </div>
+    </div>
+    <header class="inner-main-title d-flex mb-30">
+      <h1>عناصر النماذج
+        Form Elements 
+      </h1>
+      <div class="side-line"></div>
+    </header>
+    <h2 class="form-main-label">نماذج أفقية</h2>
+    <form class="mb-5">
+      <div class="form-group row mb-4">
+        <label for="inputEmail3" class="col-sm-3 col-form-label"> عنوان حقل <span
+            class="asterisk">*</span></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control custom-form-control" id="inputEmail3" placeholder="الإسم">
+        </div>
+      </div>
+      <div class="form-group row mb-4">
+        <label class="col-sm-3 col-form-label"> عنوان حقل <span class="asterisk">*</span></label>
+        <div class="col-sm-6">
+          <div class="custom-filter-select custom-form-control" style="width:100%;margin-right: 0;">
+            <select id="filter-select">
+              <!-- placeholder -->
+              <option value="0">الدولة</option>
+
+              <option value="1">مصر</option>
+              <option value="2">السعودية</option>
+              <option value="3">الامارات</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <fieldset class="form-group mb-4">
+        <div class="row">
+          <legend class="col-form-label col-sm-3 pt-0">نوع الهوية <span class="asterisk">*</span></legend>
+          <div class="col-sm-6">
+            <div class="form-check form-check-inline">
+              <label class="radio-container radio-form">
+                <input type="radio" name="radio" checked="checked" />
+                <span class="checkmark"></span>
+                <span class="check-label">هوية وطنية</span>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <label class="radio-container radio-form">
+                <input type="radio" name="radio" />
+                <span class="checkmark"></span>
+                <span class="check-label">إقامة / هوية مقيم</span>
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <label class="radio-container radio-form">
+                <input type="radio" name="radio" />
+                <span class="checkmark"></span>
+                <span class="check-label">جواز سفر</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group row mb-4">
+        <div class="col-sm-3">حقل متعدد الخيارات <span class="asterisk">*</span></div>
+        <div class="col-sm-6">
+          <div class="form-check form-check-inline">
+            <label class="checkbox-container">
+              <input type="checkbox" name="check" checked="checked" />
+              <span class="checkboxmark"></span>
+              <span class="check-label"> اختيار متعدد</span>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="checkbox-container">
+              <input type="checkbox" name="check" />
+              <span class="checkboxmark"></span>
+              <span class="check-label"> اختيار متعدد</span>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="checkbox-container">
+              <input type="checkbox" name="check" />
+              <span class="checkboxmark"></span>
+              <span class="check-label"> اختيار متعدد</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row mb-4">
+        <label for="ID" class="col-sm-3 col-form-label"> رقم الهوية <span class="asterisk">*</span></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control custom-form-control" id="ID" placeholder="أدخل رقم الهوية">
+          <span class="identity-hover" data-toggle="tooltip" data-placement="top"
+            title="وريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور "><img
+              src="assets/images/identity-icon.png" alt=""></span>
+        </div>
+      </div>
+      <div class="form-group row mb-4">
+        <label for="date" class="col-sm-3 col-form-label">حقل تاريخ <span class="asterisk">*</span></label>
+        <div class="col-sm-6 ">
+          <div class="date-wrapper">
+            <input type="text" class="form-control custom-form-control" id="date" placeholder="أدخل رقم الهوية"
+              data-date-format="mm/dd/yyyy">
+            <span class="date-toggle" id="dateToggle"><img src="assets/images/date-toggle.png" alt=""></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="form-group row mb-4">
+        <label for="rangeSlider" class="col-sm-3 col-form-label"> عنوان حقل <span
+            class="asterisk">*</span></label>
+        <div class="col-sm-6">
+          <input id="rangeSlider" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1"
+            data-slider-value="55" />
+          <p class="range-value">
+            القيمة :
+            <span></span>
+          </p>
+        </div>
+      </div>
+      <div class="form-group row mb-4">
+        <label for="area" class="col-sm-3 col-form-label"> حقل وصف<span class="asterisk">*</span></label>
+        <div class="col-sm-6">
+          <textarea type="text" class="form-control custom-form-control" id="area" placeholder="الملاحظات"
+            cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-left  col-sm-9">
+          <button class="btn btn-gray custom ml-2 mb-3">
+            <i class="fas fa-reply"></i>
+            إعادة إرسال إلى إدارة الجودة للتعديل
+          </button>
+          <button class="btn btn-success custom ml-2 mb-3">
+            <i class="fas fa-check-circle"></i>
+            إعتمد عينة المكاتب
+          </button>
+        </div>
+      </div>
+      <h5 class="form-label mb-3">تحميل المرفقات</h5>
+     <div class="row">
+       <div class="col-sm-9">
+        <div class="attachment-zone text-center">
+          <input type="file" name="file2" id="file2" class="inputfile" />
+          <label for="file2" class="btn btn-primary ">
+            <i class="fas fa-cloud-upload-alt"></i>
+            إرفاق ملف
+          </label>
+          <p>اسم المف المرفق يظهر هنا</p>
+        </div>
+       </div>
+     </div>
+      <h5 class="form-label mb-3 mt-3">مجموعة الاختيارات </h5>
+      <div class="form-group row mb-4">
+        <div class="col-sm-4 col-lg-3">
+          <div class="form-check ">
+            <label class="radio-container radio-form">
+              <input type="radio" name="vRadio" checked="checked" />
+              <span class="checkmark"></span>
+              <span class="check-label">نقــداً</span>
+            </label>
+          </div>
+          <div class="form-check ">
+            <label class="radio-container radio-form">
+              <input type="radio" name="vRadio" />
+              <span class="checkmark"></span>
+              <span class="check-label">عن طريق حساب سداد</span>
+            </label>
+          </div>
+          <div class="form-check ">
+            <label class="radio-container radio-form">
+              <input type="radio" name="vRadio" />
+              <span class="checkmark"></span>
+              <span class="check-label">تحويل بنكي</span>
+            </label>
+          </div>
+
+        </div>
+        <div class="col-sm-4  col-lg-3">
+          <div class="form-check">
+            <label class="checkbox-container">
+              <input type="checkbox" name="vCheck" checked="checked" />
+              <span class="checkboxmark"></span>
+              <span class="check-label"> اختيار متعدد</span>
+            </label>
+          </div>
+          <div class="form-check ">
+            <label class="checkbox-container">
+              <input type="checkbox" name="vCheck" />
+              <span class="checkboxmark"></span>
+              <span class="check-label"> اختيار متعدد</span>
+            </label>
+          </div>
+          <div class="form-check ">
+            <label class="checkbox-container">
+              <input type="checkbox" name="vCheck" />
+              <span class="checkboxmark"></span>
+              <span class="check-label"> اختيار متعدد</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+    <h2 class="form-main-label mb-3">نماذج رأسية</h2>
+          <div class="row">
+            <form class="col-sm-9">
+              <div class="row">
+                <div class="form-group col-md-6 mb-4">
+                  <label for="exampleFormControlInput1"> عنوان حقل <span class="asterisk">*</span></label>
+                  <input type="text" class="form-control custom-form-control" id="exampleFormControlInput1"
+                    placeholder="الإسم">
+                </div>
+                <div class="form-group col-md-6 mb-4" style="position: relative;">
+                  <label for="ID2"> رقم الهوية <span class="asterisk">*</span></label>
+                  <input type="text" class="form-control custom-form-control" id="ID2" placeholder="أدخل رقم الهوية">
+                  <span class="identity-hover" data-toggle="tooltip" data-placement="top"
+                    title="وريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور "><img
+                      src="assets/images/identity-icon.png" alt=""></span>
+  
+                </div>
+                <div class="form-group  col-md-6  mb-4">
+                  <label> عنوان حقل <span class="asterisk">*</span></label>
+  
+                  <div class="custom-filter-select custom-form-control" style="width:100%;margin-right: 0;">
+                    <select id="filter-select">
+                      <!-- placeholder -->
+                      <option value="0">الدولة</option>
+  
+                      <option value="1">مصر</option>
+                      <option value="2">السعودية</option>
+                      <option value="3">الامارات</option>
+                    </select>
+                  </div>
+  
+                </div>
+                <div class="form-group col-md-6  mb-4">
+                  <label for="date">حقل تاريخ <span class="asterisk">*</span></label>
+                  <div class="date-wrapper">
+                    <input type="text" class="form-control custom-form-control" id="date-inline"
+                      placeholder="أدخل رقم الهوية" data-date-format="mm/dd/yyyy">
+                    <span class="date-toggle" id="dateInlineToggle"><img src="assets/images/date-toggle.png" alt=""></span>
+                  </div>
+                </div>
+                <div class="form-group col-md-6 mb-4">
+                  <label> نوع الهوية<span class="asterisk">*</span></label>
+                  <div class="d-flex mt-3">
+                    <div class="form-check form-check-inline flex-fill ">
+                      <label class="radio-container radio-form">
+                        <input type="radio" name="radioInline" checked="checked" />
+                        <span class="checkmark"></span>
+                        <span class="check-label">هوية وطنية</span>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline flex-fill ">
+                      <label class="radio-container radio-form">
+                        <input type="radio" name="radioInline" />
+                        <span class="checkmark"></span>
+                        <span class="check-label">إقامة / هوية مقيم</span>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline flex-fill ">
+                      <label class="radio-container radio-form">
+                        <input type="radio" name="radioInline" />
+                        <span class="checkmark"></span>
+                        <span class="check-label">جواز سفر</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-6 mb-4">
+                  <label> حقل متعدد الخيارات <span class="asterisk">*</span></label>
+                  <div class="d-flex mt-3">
+                    <div class="form-check form-check-inline flex-fill ">
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="check" checked="checked" />
+                        <span class="checkboxmark"></span>
+                        <span class="check-label"> اختيار متعدد</span>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline flex-fill ">
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="check" />
+                        <span class="checkboxmark"></span>
+                        <span class="check-label"> اختيار متعدد</span>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline flex-fill ">
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="check" />
+                        <span class="checkboxmark"></span>
+                        <span class="check-label"> اختيار متعدد</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-12 mb-4">
+                  <label for="area"> حقل وصف<span class="asterisk">*</span></label>
+  
+                  <textarea type="text" class="form-control custom-form-control" id="area" placeholder="الملاحظات"
+                    cols="30" rows="10"></textarea>
+  
+                </div>
+                  <div class="text-left  col-12">
+                    <button class="btn btn-gray custom ml-2 mb-3">
+                      <i class="fas fa-reply"></i>
+                      إعادة إرسال إلى إدارة الجودة للتعديل
+                    </button>
+                    <button class="btn btn-success custom ml-2 mb-3">
+                      <i class="fas fa-check-circle"></i>
+                      إعتمد عينة المكاتب
+                    </button>
+                  </div>
+                
+              </div>
+            </form>
+          </div>
+          <header class="inner-main-title d-flex mb-30">
+            <h1>الأيقونات
+              Icons 
+            </h1>
+            <div class="side-line"></div>
+          </header>
+           <!-- tabs -->
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="card-body collapse show">
+            <ul class="nav  mb-3 justify-content-center check-pills" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-tasks-tab" data-toggle="pill" href="#pills-tasks" role="tab"
+                  aria-controls="pills-tasks" aria-selected="true">
+                  <i class="fas fa-user-plus"></i>
+                  تعيين ضابط الاتصال
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab"
+                  aria-controls="pills-info" aria-selected="false">
+                  <i class="fas fa-clipboard-list"></i>
+                  إجراءات الرقابة النوعية
+
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-team-tab" data-toggle="pill" href="#pills-team" role="tab"
+                  aria-controls="pills-team" aria-selected="false">
+                  <i class="fas fa-hashtag"></i>
+                  المتطلبات الأخرى
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-progess-tab" data-toggle="pill" href="#pills-progess" role="tab"
+                  aria-controls="pills-progess" aria-selected="false">
+                  <img src="assets/images/tab-progress-icon.png" alt="">
+                  سير عملية الفحص
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-tasks" role="tabpanel" aria-labelledby="pills-tasks-tab">
+                <i class="fas fa-sticky-note success-color ml-3"></i>
+                <i class="fas fa-user success-color ml-3"></i>
+                <i class="fas fa-calendar-alt success-color ml-3"></i>
+                <span class="pop-details ml-3">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <i class="far fa-building primary-color ml-3"></i>
+                <i class="far fa-calendar-alt primary-color ml-3"></i>
+                <i class="fas fa-poll primary-color ml-3"></i>
+                <i class="fas fa-list-ol primary-color ml-3"></i>
+                <i class="fas fa-map-marker-alt primary-color ml-3"></i>
+                <span class="data-icon ml-3"><i class="fas fa-check"></i></span>
+                <span class="data-icon ml-3"><i class="fas fa-ellipsis-h"></i></span>
+                <span class="data-icon empty ml-3">&nbsp;</span>
+                <img src="assets/images/edit-btn.png" class=" ml-3" alt="edit">
+                <img src="assets/images/delete-btn.png" class=" ml-3" alt="delete">
+                <img src="assets/images/print-btn.png" class=" ml-3" alt="print">
+                <i class="fas fa-plus success-color ml-3"></i>
+                <i class="fas fa-times danger-color ml-3"></i>
+                <i class="fas fa-edit primary-color ml-3"></i>
+                <i class="fas fa-pencil-ruler success-color ml-3"></i>
+                <i class="fas fa-pencil-alt gray-color ml-3"></i>
+                <i class="fas fa-pen secondary-color ml-3"></i>
+              </div>
+              <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+               
+              </div>
+              <div class="tab-pane fade" id="pills-team" role="tabpanel" aria-labelledby="pills-team-tab">
+               
+              </div>
+              <div class="tab-pane fade" id="pills-progess" role="tabpanel" aria-labelledby="pills-progess-tab">
+              
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+          <header class="inner-main-title d-flex mb-30">
+            <h1>الملاحظات
+              Notes   
+            </h1>
+            <div class="side-line"></div>
+          </header>
+
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+              <div class="regular-card notes mb-5">
+                <div class="card-body note-header">
+                  <div class="row">
+                    <div class="col-lg-6 d-flex">
+                      <span class="note-title">
+                        <i class="fas fa-sticky-note success-color ml-3"></i>
+                        محلوظة
+                      </span>
+                      <span class="note-data">
+                        فضلاً إدراج المكاتب المرسلة بالإيميل
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="card-body note-body">
+                  <div class="row">
+                    <div class="col-6 col-lg-4 d-flex">
+                      <span class="note-title">
+                        <i class="fas fa-user gray-color-light ml-3"></i>
+                        إسم المستخدم
+                      </span>
+                      <span class="note-data">
+                        QC Manger Director
+                      </span>
+                    </div>
+                    <div class="col-6 col-lg-4 d-flex">
+                      <span class="note-title">
+                        <i class="fas fa-calendar-alt gray-color-light ml-3"></i>
+                        التاريخ
+                      </span>
+                      <span class="note-data">
+                        16/5/2020 
+                        6:53:15 PM
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <button id="scroll-up-button">
+      <img src="assets/images/up-arrow.png" alt="up-icon">
+    </button>
+
+    <!-- important green line -->
+    <footer></footer>
+  </div>
+  <!-- Jquery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- datatable -->
+  <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.fixedColumns.min.js"></script>
+  <!-- chart js
+  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script> -->
+ <!-- datepicker -->
+ <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+   <!-- range slider -->
+   <script src="node_modules/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var table = $('#task-table').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 4,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        },
+        columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] }]
+      });
+      var tableGreen = $('#task-table-green').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 4,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        },
+        columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] }]
+      });
+      getTable = () => table;
+      getTableGreen= ()=> tableGreen;
+      resetTables(300);
+      $("#slide-toggle").click(function () {
+        resetTables(300)
+      });
+      $(".nav-link").click(function () {
+      resetTables(200)
+    })
+    $(".process-btn").click(function(){
+      resetTables(300)
+    })
+    function resetTables(timeOut) {
+      console.log('ss');
+
+      setTimeout(() => {
+        getTable().columns.adjust();
+        getTable().draw();
+        getTableGreen().columns.adjust();
+        getTableGreen().draw();
+        // getNoPagingTable().columns.adjust();
+        // getNoPagingTable().draw();
+      }, timeOut);}
+       // intializing datepicker
+       $('#date').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true
+      });
+      // open event for date picker
+      $("#dateToggle").click(function () {
+        $('#date').datepicker('show');
+      });
+      // intializing datepicker
+      $('#date-inline').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true
+      });
+      // open event for date picker
+      $("#dateInlineToggle").click(function () {
+        $('#date-inline').datepicker('show');
+      });
+      // slide range
+      var range = $("#rangeSlider").slider({});
+      $(".range-value span").text(range.slider('getValue'))
+      range.on('slide', function (e) {
+        console.log(e);
+        $(".range-value span").text(e.value)
+      })
+
+      // input file 
+      $(".inputfile").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings("p").html(fileName);
+      });
+
+      // initializing tooltip 
+
+      $('[data-toggle="tooltip"]').tooltip();
+
+    })
+  </script>
+  <!-- select script -->
+  <script src="js/custom-select.js"></script>
+  <!-- custom Js -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
