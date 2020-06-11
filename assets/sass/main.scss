@@ -2245,6 +2245,24 @@ background-color: #26984D;
   background-color: #26984D !important;
   background: #26984D !important;
 }
+.table-green  .dataTables_wrapper .dataTables_paginate{
+  .paginate_button.previous, .paginate_button.next{
+    color: #26984D !important;
+  }
+}
+ table.dataTable.table-gray thead{
+  background-color: #666F82;
+  }
+  table.table-gray .dataTables_wrapper .dataTables_paginate .paginate_button.current{
+    color: #fff !important;
+    background-color: #666F82 !important;
+    background: #666F82 !important;
+  }
+  table.table-gray  .dataTables_wrapper .dataTables_paginate{
+    .paginate_button.previous, .paginate_button.next{
+      color: #666F82 !important;
+    }
+  }
 .dataTables_wrapper .dataTables_paginate{
   .paginate_button{
     color: #666666 !important;
@@ -2253,11 +2271,7 @@ background-color: #26984D;
     color: #153e72 !important;
     }
 }
-.table-green  .dataTables_wrapper .dataTables_paginate{
-  .paginate_button.previous, .paginate_button.next{
-    color: #26984D !important;
-  }
-}
+
 .select-selected{
   border: 1px solid #C8CDD2;
 }

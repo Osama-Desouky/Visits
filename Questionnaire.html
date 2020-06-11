@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css"> -->
+  <!-- chart js -->
+  <link rel="stylesheet" href="node_modules/chart.js/dist/Chart.min.css">
+  <link rel="stylesheet" href="assets/css/fixedHeader.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/main.min.css" />
+  <link rel="stylesheet" href="assets/css/custom-select.min.css" />
+  <!-- FORM STEPPER -->
+  <link rel="stylesheet" href="assets/css/custom-form-stepper.min.css">
+  <link rel="stylesheet" href="assets/css/mediaQuery.min.css" />
+
+  <title>Visits - Dashboard</title>
+  <!-- chart -->
+</head>
+
+<body class="dashboard">
+  <section class="side-nav closed">
+    <div class="nav-wrapper">
+      <button type="button" id="slide-toggle" class="reversed">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="nav-logo">
+        <a href="dashboard.html">
+          <img src="assets/images/Group 2323.png" alt="nav-logo" />
+        </a>
+      </div>
+      <div class="user-card">
+        <div class="main-data d-flex">
+          <img src="assets/images/Avatar.png" alt="" />
+          <div class="title">
+            <h6>عبدالله القحطاني</h6>
+            <p>فاحص متفرغ</p>
+          </div>
+        </div>
+        <hr />
+        <div class="sub-data d-flex">
+          <div class="data-box">
+            <h6>عدد العمليات</h6>
+            <p>
+              <span>‏56</span>
+              عملية
+            </p>
+          </div>
+          <div class="data-box">
+            <h6>رابط العقد</h6>
+            <p>
+              <span><img src="assets/images/Group 1380.png" alt="" /></span>
+              العقد
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- menu -->
+      <div id="MainMenu">
+        <div class="list-group panel">
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية</a>
+          <a href="#demo2" class="list-group-item collapsed" data-toggle="collapse">
+            <img src="assets/images/check-icon.png" alt="icon" class="pre-item-icon">
+            الفحص الميداني
+            <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+          </a>
+          <div class="collapse show" id="demo2" data-parent="#MainMenu">
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              خطة الفحص السنوية</a>
+            <a href="javascript:;" class="list-group-item child-item active">
+              <i class="fas fa-chevron-left "></i>
+              عمليات الفحص</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              التقارير</a>
+          </div>
+          <a href="#demo3" class="list-group-item collapsed" data-toggle="collapse">
+            <i class="far fa-building"></i>
+            الزيارات الميدانية
+            <img src="assets/images/plus-icon.png" class="expand-icon" alt="icon">
+          </a>
+          <div class="collapse" id="demo3" data-parent="#MainMenu">
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 1</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 2</a>
+            <a href="javascript:;" class="list-group-item child-item">
+              <i class="fas fa-chevron-left "></i>
+              الزيارات الميدانية 3</a>
+          </div>
+          <a href="javascript:;" class="list-group-item">
+            <i class="far fa-bell"></i>
+            التنبيهات
+            <span class="nofication-count">3</span>
+          </a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-book-open"></i>
+            مكتبة المعرفة</a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="far fa-envelope"></i>
+            التراسل</a>
+          <a href="javascript:;" class="list-group-item">
+            <i class="fas fa-cog"></i>
+            إدارة النظام</a>
+        </div>
+      </div>
+      <p class="nav-footer">
+        جميع الحقوق محفوظة لصالح
+        <br>
+        SOCPA © الهيئة السعودية للمحاسبين القانونيين
+      </p>
+      <ul class="logos">
+        <li><img src="assets/images/surface1.png" alt="" /></li>
+        <li><img src="assets/images/2030.png" alt="" /></li>
+        <li><img src="assets/images/Logo.png" alt="" /></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="main-container container-fluid full-container">
+    <header class="top-nav">
+      <h3>فحص ملفات المراجعة </h3>
+      <ul class="menu-btns">
+        <li><a href="javascript:;" id="menu-nofi-btn">
+            <img src="assets/images/icon-noti.png" alt="">
+          </a></li>
+        <li><a href="javascript:;">
+            <img src="assets/images/icon-help.png" alt="">
+          </a></li>
+        <li><a href="javascript:;" id="menu-search-btn">
+            <img src="assets/images/icon_search.png" alt="">
+          </a></li>
+      </ul>
+    </header>
+
+    <div class="row">
+      <div class="col-sm-12 mt-30 mb-30">
+        <div class="regular-card">
+          <div class="reg-card-header">
+            <div class="panel-wrapper">
+              <button class="card-btn">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="javascript:;" class="max-panel disabled">
+                    <i class="far fa-window-restore"></i>
+                    إستعادة النافذة
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="mini-panel">
+                    <i class="far fa-window-minimize"></i>
+                    تصغير النافذة
+                  </a>
+                </li>
+                <hr>
+                <li>
+                  <a href="javascript:;" class="close-panel">
+                    <i class="fas fa-times"></i>
+                    إغلاق النافذة
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="process-progress row">
+              <!-- process by default is active , add empty class to make it inactive -->
+              <!-- add latest class to the last active process to give it a green border -->
+              <div class="process">
+                <div class="process-icon">
+
+                </div>
+                <div class="process-title">
+                  التعليمات
+                </div>
+              </div>
+              <div class="col process latest">
+                <div class="process-icon ">
+
+                </div>
+                <div class="process-title">
+                  الملخص
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  التقييم النسبي
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  مجالات المراجعة الرئيسية
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  أرصدة الحسابات
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  مجالات محددة
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  الاستبيان
+                </div>
+              </div>
+              <div class="col process empty">
+                <div class="process-icon ">
+                </div>
+                <div class="process-title">
+                  ملخص الاستبيان
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body collapse show">
+            <form id="regForm" action="">
+
+              <!-- One "tab" for each step in the form: -->
+              <div class="tab">
+                <h2 class="custom">التعليمات</h2>
+                <hr class="mb-5">
+                <h5 class="custom primary">
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل
+                </h5>
+                <p class="normal">
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء
+                  كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند موافقه العميل المبدئيه
+                  على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+                  النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي
+                  وخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
+                  منذ العام 45 قبل الميلاد. من كتاب حول أقاصي الخير والشر.
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء
+                  كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند موافقه العميل المبدئيه
+                  على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+                  النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي
+                  وخلافاَ
+                </p>
+                <h6 class="custom green mb-4">
+                  لوريم ايبسوم هو نموذج افتراضي
+                </h6>
+                <ul class="dotted">
+                  <li>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                  </li>
+                  <li>بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال
+                  </li>
+                  <li>للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
+                  </li>
+                  <li>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم
+                  </li>
+                  <li>لتعرض على العميل ليتصور طريقه وضع النصوص</li>
+                </ul>
+
+                <p class="normal">
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء
+                  كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند موافقه العميل المبدئيه
+                  على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+                  النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي
+                  وخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
+                  منذ العام 45 قبل الميلاد. من كتاب حول أقاصي الخير والشر.
+
+                </p>
+                <p class="normal">
+                  وريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء
+                  كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند موافقه العميل المبدئيه
+                  على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+                  النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي
+                  وخلافاَ
+                </p>
+                <h6 class="custom green mb-4">
+                  لوريم ايبسوم هو نموذج افتراضي
+                </h6>
+                <ol class="number">
+                  <li>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                  </li>
+                  <li>بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال
+                  </li>
+                  <li>للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
+                  </li>
+                  <li>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم
+                  </li>
+                  <li>لتعرض على العميل ليتصور طريقه وضع النصوص</li>
+                </ol>
+                <p class="normal">
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء
+                  كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند موافقه العميل المبدئيه
+                  على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم ويقول البعض ان وضع
+                  النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم الاساسي
+                  وخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي
+                  منذ العام 45 قبل الميلاد. من كتاب حول أقاصي الخير والشر.
+
+                </p>
+              </div>
+
+              <div class="tab">
+                <h2 class="custom">الملخص</h2>
+                <hr class="mb-5">
+                <div class="row">
+                  <div class="form-group col-12 mb-4">
+                    <label for="name"> اسم الشريك <span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="name" placeholder="الإسم">
+                  </div>
+                  <div class="form-group  col-md-6  mb-4">
+                    <label>نوع الكيان <span class="asterisk">*</span></label>
+
+                    <div class="custom-filter-select custom-form-control" style="width:100%;margin-right: 0;">
+                      <select>
+                        <!-- placeholder -->
+                        <option value="0">اختر النوع</option>
+
+                        <option value="1">كيان 1</option>
+                        <option value="2">كيان 2</option>
+                        <option value="3">كيان 3</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="form-group  col-md-6  mb-4">
+                    <label>قطاع الأعمال<span class="asterisk">*</span></label>
+
+                    <div class="custom-filter-select custom-form-control" style="width:100%;margin-right: 0;">
+                      <select>
+                        <!-- placeholder -->
+                        <option value="0">اختر القطاع</option>
+
+                        <option value="1">قطاع 1</option>
+                        <option value="2">قطاع 2</option>
+                        <option value="3">قطاع 3</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="form-group  col-md-6  mb-4">
+                    <label> نوع المشاركة<span class="asterisk">*</span></label>
+
+                    <div class="custom-filter-select custom-form-control" style="width:100%;margin-right: 0;">
+                      <select>
+                        <!-- placeholder -->
+                        <option value="0">اختر النوع</option>
+
+                        <option value="1">كيان 1</option>
+                        <option value="2">كيان 2</option>
+                        <option value="3">كيان 3</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="totalOrder"> اجمالي المطلوبات <span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="totalOrder"
+                      placeholder="ادخل القيمة">
+                  </div>
+                  <div class="form-group  col-md-6  mb-4">
+                    <label>تصنيفات مخاطر المشاركة<span class="asterisk">*</span></label>
+
+                    <div class="custom-filter-select custom-form-control" style="width:100%;margin-right: 0;">
+                      <select>
+                        <!-- placeholder -->
+                        <option value="0">اختر النوع</option>
+
+                        <option value="1">كيان 1</option>
+                        <option value="2">كيان 2</option>
+                        <option value="3">كيان 3</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="fees"> رسوم المشاركة<span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="fees" placeholder="ادخل القيمة">
+                  </div>
+
+
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="fees2"> مادية التدقيق المحسوبة من قبل المدقق<span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="fees2" placeholder="اختر النوع">
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="fees3"> مادية المراجعة التي تم تقييمها بواسطة هيئة المحاسبين القانونيين<span
+                        class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="fees3"
+                      placeholder="ادخل القيمة">
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="pa-type"> نوع المشاركة<span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="pa-type"
+                      placeholder="اختر النوع">
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="total-orders">اجمالي المطلوبات<span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="total-orders"
+                      placeholder="ادخل القيمة">
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="categ"> تصنيفات مخاطر المشاركة<span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="categ" placeholder="ادخل النوع">
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="fees4"> رسوم المشاركة<span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="fees4"
+                      placeholder="ادخل القيمة">
+                  </div>
+                  <div class="form-group col-md-6 mb-4">
+                    <label for="type2"> نوع الكيان <span class="asterisk">*</span></label>
+                    <input type="text" class="form-control custom-form-control"
+                      oninput="this.className = 'form-control custom-form-control'" id="type2" placeholder="ادخل النوع">
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab">
+                <h2 class="custom">التقييم النسبي</h2>
+                <hr class="mb-5">
+
+                <table id="rateTable" class="display  table table-striped cell-border table-gray" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span>العوامل ذات الصلة الممكنة بناء على الخبرة والإرشاد لهيئة المحاسبين القانونيين</span>
+
+                      </th>
+                      <th>
+
+                        <span>من</span>
+
+                      </th>
+                      <th>
+                        <span>الى</span>
+
+                      </th>
+                      <th>
+
+                        <span> المبلغ بالريال السعودي</span>
+
+                      </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>الربح قبل احتساب الضرائب</td>
+                      <td><input type="text" id="row-1-from" name="row-1-from" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-1-to" name="row-1-to" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-1-total" name="row-1-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>الإيرادات</td>
+                      <td><input type="text" id="row-2-from" name="row-2-from" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-2-to" name="row-2-to" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-2-total" name="row-2-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>إجمالي الأصول</td>
+                      <td><input type="text" id="row-3-from" name="row-3-from" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-3-to" name="row-3-to" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-3-total" name="row-3-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>مجموع الاسهم</td>
+                      <td><input type="text" id="row-4-from" name="row-4-from" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-4-to" name="row-4-to" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-4-total" name="row-4-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>إجمالي المصروفات</td>
+                      <td><input type="text" id="row-5-from" name="row-5-from" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-5-to" name="row-5-to" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-5-total" name="row-5-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>تعبئة استبيان مكافحة غسل الأموال</td>
+                      <td><input type="text" id="row-6-from" name="row-6-from" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-6-to" name="row-6-to" class="form-control custom-form-control">
+                      </td>
+                      <td><input type="text" id="row-6-total" name="row-6-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>تعبئة استبيان بيانات المكتب</td>
+                      <td class="text-center" colspan="2">الأهمية المناسبة</td>
+                      <td style="display: none;"></td>
+                      <td><input type="text" id="row-6-total" name="row-6-total"
+                          class="form-control custom-form-control"></td>
+                    </tr>
+                    <tr>
+                      <td>الأهمية لهيئة المحاسبين القانونيين لمراجعة الملف/td>
+                      <td></td>
+                      <td></td>
+                      <td>المجموع
+                        :
+                        <span>185</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                      <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                      </tr>
+                    </tfoot> -->
+                </table>
+
+              </div>
+
+              <div class="tab">
+                <h2 id="ss" class="custom">مجالات المراجعة الرئيسية</h2>
+                <hr class="mb-5">
+                <table id="mainRevisionTable" class="display  table table-striped cell-border table-gray"
+                  style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span>group</span>
+                      </th>
+                      <th>
+                        <span>#</span>
+                      </th>
+                      <th>
+                        <span>السؤال</span>
+                      </th>
+                      <th>
+                        <span>المعيار</span>
+                      </th>
+                      <th>
+                        <span>التقييم</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>1</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>2</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>3</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>4</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>5</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>6</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>7</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>8</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>9</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+
+              <div class="tab">
+                <h2 class="custom">أرصدة الحسابات</h2>
+                <hr class="mb-5">
+                SOON
+              </div>
+
+              <div class="tab">
+                <h2 class="custom">مجالات محددة</h2>
+                <hr class="mb-5">
+                <table id="categTable" class="display  table table-striped cell-border table-gray mb-5"
+                  style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span>اسم التصنيف</span>
+
+                      </th>
+                      <th>
+
+                        <span>المبلغ بالريال السعودي في نهاية السنة</span>
+
+                      </th>
+                      <th>
+                        <span>القيمة المادية</span>
+
+                      </th>
+                      <th>
+
+                        <span>القيمة المتغيرة</span>
+
+                      </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>الربح قبل احتساب الضرائب</td>
+                      <td><input type="text" id="row-1-from" name="row-1-from" class="form-control custom-form-control">
+                      </td>
+                      <td>0
+                      </td>
+                      <td>1.5
+                    </tr>
+                    <tr>
+                      <td>الربح قبل احتساب الضرائب</td>
+                      <td><input type="text" id="row-2-profit" name="row-2-profit"
+                          class="form-control custom-form-control">
+                      </td>
+                      <td>0
+                      </td>
+                      <td>2.5
+                    </tr>
+                    <tr>
+                      <td>الربح قبل احتساب الضرائب</td>
+                      <td><input type="text" id="row-3-profit" name="row-3-profit"
+                          class="form-control custom-form-control">
+                      </td>
+                      <td>0
+                      </td>
+                      <td>5.5
+                    </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                      <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                      </tr>
+                    </tfoot> -->
+                </table>
+
+                <table id="categMain" class="display  table table-striped cell-border table-gray"
+                  style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span>group</span>
+                      </th>
+                      <th>
+                        <span>#</span>
+                      </th>
+                      <th>
+                        <span>السؤال</span>
+                      </th>
+                      <th>
+                        <span>المعيار</span>
+                      </th>
+                      <th>
+                        <span>التقييم</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>1</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio1">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>2</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio2">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>3</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio3">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>4</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio4">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>5</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio5">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>6</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio6">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>7</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio7">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>8</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio8">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- first td Is the group name -->
+                      <td>2 عنوان مجموعة الأسئلة التالية مثال قبول المشاركة</td>
+                      <td>9</td>
+                      <td>لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص
+                        بالتصاميم سواء كانت تصاميم مطبوعه بروشور او فلاير على سبيل المثال او نماذج مواقع انترنت وعند
+                        موافقه العميل المبدئيه</td>
+                      <td class="nowrap">ISA 220 -11 & 12</td>
+                      <td class="nowrap">
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9" checked="checked">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">0</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">1</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">2</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">3</span>
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="radio-container radio-form">
+                            <input type="radio" name="radio9">
+                            <span class="checkmark"></span>
+                            <br>
+                            <span class="check-label">4</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot> -->
+                </table>
+              </div>
+              <div class="tab">
+                <h2 class="custom">الاستبيان</h2>
+                <hr class="mb-5">
+                SOON
+              </div>
+              <div class="tab">
+                <h2 class="custom">ملخص الاستبيان</h2>
+                <hr class="mb-5">
+                <div class="regular-card notes mb-5" style="background-color: #fff;">
+                  <div class="card-body note-header">
+                    <div class="row">
+                      <div class="col-lg-6 d-flex">
+                        <span class="note-title">
+                          <i class="fas fa-file-alt success-color ml-3"></i>
+                          إجمالي درجة وزن الملف
+                        </span>
+                        <span class="note-data">
+                        3.5
+                        </span>
+                      </div>
+                      <div class="col-lg-6 d-flex">
+                        <span class="note-title">
+                          <i class="fas fa-file-alt success-color ml-3"></i>
+                          معدل الامتثال العام للملف
+                        </span>
+                        <span class="note-data">
+                          4.5
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <table id="reviewTable" class="display  table table-striped cell-border" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span>مجال المراجعة والتقييم</span>
+
+                      </th>
+                      <th>
+
+                        <span>FS Amount</span>
+
+                      </th>
+                      <th>
+                        <span>وقت الأهمية</span>
+
+                      </th>
+                      <th>
+
+                        <span> الدرجة العظمى</span>
+
+                      </th>
+                      <th>
+                        <span>النتيجة</span>
+
+                      </th>
+                      <th>
+                        <span>معدل الامتثال الفردي</span>
+
+                      </th>
+                      <th>
+                        <span>الدرجة العظمى</span>
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>مجالات المراجعة الرئيسية</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>JET التخطيط والتحكم بما في ذلك</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>قسم التقارير</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>مجالات اختبار الأدلة - أرصدة الحسابات</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>الممتلكات والمنشآت والمعدات</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>الممتلكات الاستثمارية</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>الأصول غير الملموسة</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>مناطق صناعية محددة</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>مناطق محددة 01</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>مناطق محددة 02</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>مناطق محددة 03</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>إجمالي درجة وزن الملف</td>
+                      <td></td>
+                      <td></td>
+                      <td>5</td>
+                      <td>1.5</td>
+                      <td>1.5</td>
+                      <td>5</td>
+                    </tr>
+                  </tbody>
+                  <!-- <tfoot>
+                      <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                      </tr>
+                    </tfoot> -->
+                </table>
+              </div>
+
+              <div class="card-footer">
+                <div class="text-center pt-3">
+                  <button class="btn btn-primary custom ml-3 mb-3" type="button" id="prevBtn" onclick="nextPrev(-1)">
+                    <i class="fas fa-chevron-right"></i>
+                    السابق
+                  </button>
+                  <button class="btn btn-primary custom ml-3 mb-3" type="button" id="nextBtn" onclick="nextPrev(1)">
+
+                    التالي
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+
+                  <button class="btn btn-success custom ml-3 mb-3 float-left" type="submit">
+                    <i class="far fa-save"></i>
+                    حفظ
+                  </button>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5"></div>
+    <button id="scroll-up-button">
+      <img src="assets/images/up-arrow.png" alt="up-icon">
+    </button>
+    <footer></footer>
+  </div>
+  <!-- Jquery -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- bootstrap -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- datatable -->
+  <script src="node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.fixedHeader.min.js"></script>
+  <!-- chart js -->
+  <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+  <script src="js/Questionair.js"></script>
+  <!-- select script -->
+  <script src="js/custom-select.js"></script>
+  <!-- custom Js -->
+  <script src="js/custom.js"></script>
+  <script src="js/custom-form-stepper.js"></script>
+
+</body>
+
+</html>
