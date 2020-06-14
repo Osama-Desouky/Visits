@@ -45,6 +45,7 @@ $(document).ready(() => {
     "order": [[ groupColumn, 'asc' ]],
     ordering: false,
     "paging": false,
+    fixedHeader: true,
     "drawCallback": function ( settings ) {
       var api = this.api();
       var rows = api.rows( {page:'current'} ).nodes();
@@ -102,6 +103,7 @@ $(document).ready(() => {
     "order": [[ groupColumn, 'asc' ]],
     ordering: false,
     "paging": false,
+    fixedHeader: true,
     "drawCallback": function ( settings ) {
       var api = this.api();
       var rows = api.rows( {page:'current'} ).nodes();
