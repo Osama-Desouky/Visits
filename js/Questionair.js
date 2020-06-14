@@ -74,6 +74,7 @@ $(document).ready(() => {
           }
       } );}
   });
+  
   var categTable =$("#categTable").DataTable({
     searching: false,
     lengthChange: false,
@@ -148,10 +149,6 @@ $(document).ready(() => {
   getTable3 = () => categTable;
   getTable4 = () => categMain;
   getTable5 = () => reviewTable;
-  $('.main-container').scroll(function() {
-   console.log( $("#mainRevisionTable").scrollTop());
-   
-  });
   $("#slide-toggle").click(function () {
     resetTables(300);
   });

@@ -15,6 +15,7 @@ input.invalid {
 .tab {
   display: none;
   padding: 46px 35px;
+  overflow: hidden;
 }
 
 .process-progress{
@@ -144,4 +145,10 @@ table.fixed{
     position: sticky;
     top: 0;
   }
+}
+.fixed-header-container{
+  height: auto;
+}
+body.dashboard.fixed-header-page{
+overflow: auto;
 }
