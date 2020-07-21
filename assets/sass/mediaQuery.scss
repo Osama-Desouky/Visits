@@ -102,6 +102,27 @@
     width: 100% !important;
     margin-right: 0;
   }
+  .filter-bar{
+    flex-direction: column;
+    .custom-select-box{
+      text-align: right;
+    }
+  }
+  .common-cards{
+    .w-20
+    {
+      max-width: none !important;
+      min-width: none !important;
+    }
+  }
+  header.report-search .custom-select-box .custom-filter-select {
+    margin-right: auto;
+    margin-left: auto;
+}
+header.report-search .custom-select-box{
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
 }
 @media (max-width:468px){
   .login-form .form-wrap{
