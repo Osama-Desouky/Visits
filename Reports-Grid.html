@@ -729,6 +729,27 @@
   <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
   <script>
     $(document).ready(function () {
+    
+ console.log('a',table);
+     if(window.innerWidth < 1200){
+      var table = $('#task-table').DataTable({
+        searching: false,
+        lengthChange: false,
+        pageLength: 15,
+        info: false,
+        order: [],
+        scrollX: true,
+        scrollCollapse: true,
+        language: {
+          paginate: {
+            next: '<i class="fas fa-chevron-left"></i>',
+            previous: '<i class="fas fa-chevron-right"></i>'
+          }
+        },
+        // columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] }]
+      });
+     }
+     else{
       var table = $('#task-table').DataTable({
         searching: false,
         lengthChange: false,
@@ -745,6 +766,7 @@
         },
         // columnDefs: [{ orderable: false, targets: [-1] }, { orderable: false, targets: [-2] }]
       });
+     }
       getTable = () => table;
       var table2 = $('#team-table').DataTable({
         searching: false,
