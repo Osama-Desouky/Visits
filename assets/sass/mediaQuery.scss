@@ -42,6 +42,12 @@
     max-width: initial;
     width: auto;
   }
+  .common-cards {
+    .w-20 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
 }
 @media (max-width: 1199px) {
   .login-content {
