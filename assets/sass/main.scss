@@ -2534,3 +2534,33 @@ header.report-search {
   display: block;
   background-position: center center;
 }
+.grid-container{
+   .reg-card-header h4{
+     color: #1D4D8B;
+     font-size: 25px;
+   }
+   .filter-form{
+     label{
+       color: #1D4D8B;
+     }
+   }
+}
+.report-grid{
+  table.dataTable thead{
+    background-color: #639FD2;
+  }
+  table.dataTable thead .sorting {
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    vertical-align: middle;
+}
+th, td{
+  white-space: normal;
+}
+table.dataTable tbody tr td {
+  font-size: 13px;
+  line-height: 18px;
+}
+}
