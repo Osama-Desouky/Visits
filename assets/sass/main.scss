@@ -187,8 +187,9 @@ h6 {
   footer {
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 180px!important;
     left: 0;
+    background: none!important;
   }
 }
 .login-form {
