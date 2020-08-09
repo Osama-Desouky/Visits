@@ -1,3 +1,5 @@
+//  extensionName: .min.css, savePath: /dist/css
+
 @font-face {
   font-family: almarai;
   src: url("../fonts/Almarai-Regular.ttf");
@@ -2564,4 +2566,19 @@ table.dataTable tbody tr td {
   font-size: 13px;
   line-height: 18px;
 }
+}
+
+
+/*-----Access denied-----*/
+.access-denied-imgwrapper{
+  padding-top: 20px;
+}
+.accessdenied-msg-wrapper{
+  padding: 10px;
+}
+.red-color{
+  color: #E92828!important;
+}
+.all-caps{
+  text-transform: uppercase;
 }
