@@ -4,6 +4,12 @@ $(window).on('load',function() {
     $(".main-container").removeClass("full-container");
     $("#slide-toggle").removeClass("reversed");
  }
+  else if ($(window).width() <= 1599) {
+  $(".side-nav").addClass("closed");
+  $(".main-container").addClass("full-container");
+  $("#slide-toggle").addClass("reversed");
+}
+
 })
 $(document).ready(function () {
 $('#scroll-up-button').click(function(){
